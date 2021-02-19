@@ -2,7 +2,12 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { withUnpublishedPreview } from 'gatsby-source-prismic';
-// import ContentPage from 'templates/content';
+import BlogIndexPage from 'templates/blog-index';
+import BlogIndividualPage from 'templates/blog-individual';
+import ContentPage from 'templates/content';
+import HomePage from 'templates/home';
+import WorkIndexPage from 'templates/work-index';
+import WordIndividualPage from 'templates/work-individual';
 import Shell from 'patterns/shell/Shell';
 
 import '../scss/main.scss';
@@ -45,11 +50,14 @@ export const query = graphql`
 NotFoundPage.propTypes = propTypes;
 NotFoundPage.defaultProps = defaultProps;
 
-export default NotFoundPage;
-
-// // If an unpublished `page` document is previewed, PageTemplate will be rendered.
-// export default withUnpublishedPreview(NotFoundPage, {
-//     templateMap: {
-//         content: ContentPage,
-//     },
-// });
+// If an unpublished `page` document is previewed, PageTemplate will be rendered.
+export default withUnpublishedPreview(NotFoundPage, {
+    templateMap: {
+        blog_index_page: BlogIndexPage,
+        blog_individual_page: BlogIndividualPage,
+        content_page: ContentPage,
+        home_page: HomePage,
+        work_index_page: WorkIndexPage,
+        work_individual_page: WordIndividualPage,
+    },
+});
