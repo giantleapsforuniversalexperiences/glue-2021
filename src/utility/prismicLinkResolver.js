@@ -3,7 +3,7 @@ const linkResolverSitemap = require('./linkResolverSitemap.json');
 const linkResolver = ({ node, key, value } = {}) => doc => {
     function returnFullPageSlug(uid) {
         const object = linkResolverSitemap.pages.find(obj => obj.uid === uid);
-        return (object?.slug) ? object.slug : `/${doc.uid}`;
+        return (object) ? object.slug : `/${doc.uid}`;
     }
     
     switch(doc.type) {
