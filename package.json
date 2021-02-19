@@ -57,6 +57,7 @@
     "eslint-plugin-react-hooks": "^4.1.0",
     "esm": "^3.2.25",
     "gatsby-plugin-root-import": "^2.0.6",
+    "react-player": "^2.9.0",
     "stylelint": "^13.7.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0"

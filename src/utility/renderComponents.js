@@ -151,7 +151,7 @@ function renderComponents(component, type) {
             <Video
                 key={`${type}-${index}`}
                 caption={component?.primary?.video_caption?.raw}
-                video={component?.primary?.video_youtube_or_vimeo_video?.html}
+                video={component?.primary?.video_youtube_or_vimeo_video?.embed_url}
             />
         );
     case 'work_list_featured':

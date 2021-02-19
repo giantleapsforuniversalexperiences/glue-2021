@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import loadable from '@loadable/component';
+import ReactPlayer from 'react-player/lazy';
 
 import './Video.scss';
 
@@ -27,7 +28,7 @@ function Video({
         <>
             {video && (
                 <figure className={`video ${className}`}>
-                    <div className="video-tile" dangerouslySetInnerHTML={{ __html: video }} />
+                    <ReactPlayer className="video-tile" url={video} />
                     {caption && (
                         <figcaption>
                             <Content content={caption} />
