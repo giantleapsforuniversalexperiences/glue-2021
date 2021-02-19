@@ -67,6 +67,8 @@ module.exports = {
                 src: path.join(__dirname, 'src'),
                 components: path.join(__dirname, 'src/components'),
                 patterns: path.join(__dirname, 'src/patterns'),
+                templates: path.join(__dirname, 'src/templates'),
+                utility: path.join(__dirname, 'src/utility'),
             }
         },
         'gatsby-plugin-sass',
