@@ -1,6 +1,14 @@
 const path = require('path');
 const fs = require('fs');
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+	actions.setWebpackConfig({
+      	resolve: {
+          	modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+      	},
+  	});
+};
+
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
 
@@ -230,11 +238,3 @@ exports.createPages = async ({ graphql, actions }) => {
 	});
 
 }
-
-exports.onCreateWebpackConfig = ({ actions }) => {
-	actions.setWebpackConfig({
-      	resolve: {
-          	modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-      	},
-  	});
-};
