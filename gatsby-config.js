@@ -1,4 +1,5 @@
 const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development';
+const path = require('path');
 const linkResolver = require('./src/utility/prismicLinkResolver');
 
 console.log(`Using environment config: '${activeEnv}'`);
@@ -59,6 +60,14 @@ module.exports = {
                     },
                 },
             },
+        },
+        {
+            resolve: 'gatsby-plugin-root-import',
+            options: {
+                src: path.join(__dirname, 'src'),
+                components: path.join(__dirname, 'src/components'),
+                patterns: path.join(__dirname, 'src/patterns'),
+            }
         },
         'gatsby-plugin-sass',
         {
