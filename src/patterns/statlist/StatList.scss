@@ -1,0 +1,15 @@
+.dark {
+    .tile {
+        .link {
+            color: #ffffff;
+
+            &::before {
+                filter: invert(100%) brightness(100%) grayscale(100%);
+            }
+
+            &:hover {
+                color: #0038F0;
+            }
+        }
+    }
+}

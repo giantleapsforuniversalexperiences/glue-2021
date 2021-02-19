@@ -1,0 +1,51 @@
+.hero {
+    h1 {
+        font-family: 'GT Super Display Super';
+        font-weight: 900;
+        font-size: 15.943vw;
+        line-height: 106.5%;
+        letter-spacing: -1.96px;
+        padding-bottom: 1.5em;
+        padding-top: 0.75em;
+    }
+}
+
+.byline {
+    font-size: 1em;
+    text-align: left;
+    color: #697D9A;
+    margin-bottom: 2em;
+}
+
+.byline span {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+@media only screen and (min-width: 920px) {
+    .hero {
+        h1 {
+            font-size: 8.475vw;
+            line-height: 100%;
+            letter-spacing: -5.76px;
+            padding-top: 1.125em;
+            padding-right: 3.75vw;
+            padding-bottom: 1.5em;
+            padding-left: 3.75vw;
+            text-align: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    .byline {
+        font-size: 1.125em;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+
+    .byline span {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}

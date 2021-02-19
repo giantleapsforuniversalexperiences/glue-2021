@@ -1,0 +1,187 @@
+.content-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    margin-top: 2.4em;
+
+    .content-block {
+        position: relative;
+
+        h4 {
+            font-size: 1.5em;
+            line-height: 106.5%;
+            letter-spacing: -1.56px;
+            margin-top: 0;
+            padding-top: 0;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            margin-bottom: 2.125em;
+        }
+
+        img {
+            max-width: 100%;
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+
+        .link-block {
+            font-size: 1.2em;
+            line-height: 1.45em;
+            letter-spacing: -1.125px;
+            color: #03070D;
+            position: relative;
+            left: 0;
+            display: block;
+            width: calc(100% - 1.6em);
+            padding: 0.5em 0;
+            margin: -1.25em 0 2em 0;
+
+            .link {
+                width: calc(100% - 1.6em);
+                position: relative;
+                top: 0;
+                left: 1.6em;
+
+                &::before {
+                    content: '';
+                    background: transparent url(/images/glue_link.svg) no-repeat center;
+                    background-size: contain;
+                    width: 1.0657142857em;
+                    height: 0.4047619048em;
+                    display: inline-block;
+                    position: absolute;
+                    top: 0.3885714286em;
+                    left: -1.5em;
+                }
+
+                p,
+                div {
+                    display: inline;
+                    font-size: 1em;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &:nth-of-type(1) {
+            order: 1;
+        }
+
+        &:nth-of-type(2) {
+            order: 0;
+        }
+    }
+
+    &.content-equal-split {
+        margin-top: 4em;
+
+        .content-block {
+            h3 {
+                margin-top: 0.5em;
+            }
+
+            ~.button {
+                margin-top: 0;
+                margin-bottom: 2.875em;
+            }
+
+            &:nth-of-type(1) {
+                order: 0;
+            }
+
+            &:nth-of-type(2) {
+                order: 1;
+            }
+        }
+    }
+}
+
+.dark {
+    .content-list {
+        .link {
+            color: #ffffff;
+
+            &::before {
+                filter: invert(100%) brightness(100%) grayscale(100%);
+            }
+
+            &:hover {
+                color: #0038F0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .content-block {
+        padding-bottom: 2em;
+
+        ~.content-block:last-of-type {
+            padding-bottom: 0;
+        }
+    }
+
+    .content-list {
+        grid-template-columns: 500px auto;
+        column-gap: 10%;
+        padding-top: 2em;
+        margin: 0 0 7em 0;
+
+        .content-block {
+            h4 {
+                padding-top: 0;
+                font-size: 2.875em;
+                letter-spacing: -3.86px;
+            }
+
+            h3 {
+                width: 100%;
+                margin-bottom: 0.65em;
+            }
+
+            ~.button {
+                margin-top: 3em;
+                margin-bottom: 0.5em;
+            }
+
+            p {
+                font-size: 1.2em;
+                line-height: 1.45em;
+                letter-spacing: -1.125px;
+                margin-bottom: 1.75em;
+            }
+
+            img {
+                max-width: 90%;
+                margin-left: 10%;
+            }
+
+            .link-block {
+                margin: 1.5em 0 0 0;
+            }
+
+            &:nth-of-type(1) {
+                order: 0;
+            }
+
+            &:nth-of-type(2) {
+                order: 1;
+            }
+        }
+
+        &.content-equal-split {
+            padding-top: 0;
+            grid-template-columns: 45% 45%;
+        }
+
+        &.capabilities {
+            padding-top: 3em;
+
+            .content-block {
+                padding-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,125 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeMove {
+    0% {
+        opacity: 0;
+        padding: 17.5vh 0 5vh 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        padding: 7.5vh 0 15vh 0;
+    }
+}
+
+@keyframes fadePage {
+    0% {
+        opacity: 0;
+        padding-top: 5em;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        padding-top: 1.5em;
+    }
+}
+
+@keyframes b-ripple {
+    0% {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes b-ripple-duplicate {
+    0% {
+        transform: scale(0);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.b-contain input+.b-input::before {
+    animation: b-ripple 250ms ease-out;
+}
+
+.b-contain input:checked+.b-input::before {
+    animation-name: b-ripple-duplicate;
+}
+
+.b-contain .b-input::before {
+    visibility: hidden;
+}
+
+.b-contain input:focus+.b-input::before {
+    visibility: visible;
+}
+
+.b-contain:first-child .b-input::before {
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 920px) {
+    @keyframes fadePage {
+        0% {
+            opacity: 0;
+            padding-top: 10em;
+        }
+
+        40% {
+            opacity: 0;
+        }
+
+        70% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 1;
+            padding-top: 5em;
+        }
+    }
+}

@@ -1,0 +1,285 @@
+.header {
+    padding: 3.25% 1em 1em 1em;
+}
+
+.header__logo {
+    a {
+        background: transparent url(/images/glue_logo_dark.svg) no-repeat center;
+        background-size: contain;
+        height: 3em;
+        width: 3em;
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        text-indent: -9999px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.header__menu-button {
+    appearance: none;
+    background: #D8DDE6;
+    box-shadow: none;
+    border: none;
+    letter-spacing: -0.7px;
+    color: #03070D;
+    font-size: 19px;
+    font-weight: bold;
+    width:80px;
+    height:37px;
+    position: fixed;
+    top: 1.5em;
+    right: 0.8571428571em;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 37px;
+    z-index: 100;
+
+    &:hover {
+        appearance: none;
+        background: #1D2634;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    &.active {
+        background: #D8DDE6;
+
+        &:hover {
+            background: #1D2634;
+        }
+    }
+}
+
+.header__navigation {
+    appearance: none;
+    background: #03070D;
+    height: 90%;/**hack for opera mini**/
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 1em;
+    flex-flow:column nowrap;
+    align-content: stretch;
+    display: none;
+    z-index: 99;
+    opacity: 0;
+
+    &.active {
+        display: flex;
+        opacity: 1;
+        animation: fadeIn 0.175s linear;
+    }
+
+    .header__logo {
+        a {
+            background: transparent url(/images/glue_logo_light.svg) no-repeat center;
+            background-size: contain;
+            height: 3em;
+            width: 3em;
+            display: block;
+            position: relative;
+            top: 0;
+            left: 0;
+            text-indent: -9999px;
+            z-index: 200;
+        }
+    }
+
+    ul {
+        height: 100%;
+        margin: 0;
+        padding: 4.5vh 0 15vh 0;
+        opacity: 1;
+        animation: fadeMove 0.5s ease-in-out;
+
+        li {
+            flex: 1;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: stretch;
+            flex-grow: 1;
+            text-align: center;
+            height: calc(56vh / 6);
+            margin-bottom: 0;
+
+            a {
+                display: inline; 
+                color: #03070D;
+                text-decoration: none;
+                background-image: linear-gradient(rgb(138,146,157), rgb(138,146,157)),linear-gradient(#0038F0, #0038F0);
+                background-size: 100% 2px, 0 2px;
+                background-position: 100% 100%, 0 100%;
+                background-repeat: no-repeat;
+                transition: background-size 0.3s linear, background-position-x 0.3s linear;
+
+                background: transparent;
+                width: 100%;
+                flex: 1;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                font-size: 167.5%;
+                color: #697D9A;
+                text-decoration: none;
+
+                &:hover {
+                    color: #0038F0;
+                    background-size: 0 2px, 100% 2px;
+                    background-position: 100% 100%, 0 100%;
+                }
+
+                &.active {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+body.dark {
+    .header__logo {
+        a {
+            filter: invert(100%) brightness(100%) grayscale(100%);
+        }
+    }
+
+    .header__navigation {
+        .header__logo {
+            a {
+                filter: invert(0%) brightness(100%) grayscale(100%);
+            }
+        }
+
+        ul {
+            li {
+                a {
+                    color:#697D9A;
+
+                    &.active {
+                        color: #ffffff;
+                    }
+
+                    &:hover,
+                    &.active:hover {
+                        color: #0038F0;
+                    }
+                }
+            }
+        }
+    }
+
+    .header__menu-button {
+        color: #03070D;
+
+        &:hover {
+            color: #ffffff;
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .header {
+        background: #ffffff;
+        position: fixed;
+        width: 100%;
+        padding: 0.9em 4.5em 1em 4.5em;
+        margin: 0 auto;
+        z-index: 9999;
+    }
+
+    .header__logo {
+        display: block; float: left; position: relative; top: 0.5em; left: 0;
+    }
+
+    .header__menu-button {
+        display: none;
+    }
+
+    .header__navigation {
+        width: calc(100% - 68.5px);
+        background: transparent;
+        position: relative;
+        display: block;
+        left: auto;
+        margin: 0 0 0 auto;
+        height: auto;
+        opacity: 1;
+        padding: 1.125em 0 0.875em 1em;
+
+        .header__logo {
+            display: none;
+        }
+
+        ul {
+            width: 100%;
+            animation: none;
+            text-align: right;
+            padding: 0;
+            left: auto;
+            right: 0;
+            margin: 0 0 0 auto;
+
+            li {
+                height: auto;
+                display: inline-block; 
+                padding: 0.25% 1.125%;
+
+                &:last-of-type {
+                    padding-right: 0;
+                }
+
+                a {
+                    color: #434C58;
+                    font-size: 1em;
+                    line-height: 1.35em;
+                    text-decoration: none;
+                    background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)),linear-gradient(#0038F0, #0038F0);
+                    background-size: 100% 2px, 0px 2px;
+                    background-position: 100% 100%, 0px 100%;
+                    background-repeat: no-repeat;
+                    transition: background-size 0.25s linear, background-position-x 0.25s linear;
+
+                    &.active {
+                        color: #03070D;
+                        background-image: linear-gradient(rgb(3,7,13), rgb(3,7,13)),linear-gradient(#0038F0, #0038F0);
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &.active:hover {
+                        color: #0038F0;
+                    }
+                }
+            }
+        }
+    }
+
+    body.dark {
+        .header {
+            background: #03070D;
+        }
+
+        .header__navigation {
+            ul {
+                li {
+                    a {
+                        &.active {
+                            background-image: linear-gradient(rgb(255,255,255), rgb(255,255,255)),linear-gradient(#0038F0, #0038F0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

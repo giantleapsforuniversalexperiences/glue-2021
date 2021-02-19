@@ -1,0 +1,64 @@
+.image {
+    background: none;
+    margin-bottom: 0;
+    margin-left: -1em;
+    margin-right: -1em;
+
+    .img {
+        background: #03070D;
+    }
+
+    figcaption {
+        padding: 0.5em 1em 0 1em;
+
+        > :first-child {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 0;
+        }
+
+        a {
+            display: inline;
+            color: #03070D;
+            text-decoration: none;
+            background-image: linear-gradient(rgb(138,146,157), rgb(138,146,157)),linear-gradient(#0038F0, #0038F0);
+            background-size: 100% 2px, 0 2px;
+            background-position: 100% 100%, 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 0.3s linear, background-position-x 0.3s linear;
+
+            &:hover {
+                color: #0038F0;
+                background-size: 0 2px, 100% 2px;
+                background-position: 100% 100%, 0 100%;
+            }
+        }
+    }
+}
+
+.dark {
+    .image {
+        figcaption a {
+            color: #ffffff;
+
+            &:hover {
+                color: #0038F0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .image {
+        margin-left: -4.5em;
+        margin-right: -4.5em;
+
+        figcaption {
+            padding: 1em 4.5em 0 4.5em;
+        }
+    }
+}

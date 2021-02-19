@@ -1,0 +1,59 @@
+.industries {
+    padding: 1em 0 3em 0;
+
+    .industry {
+        margin-bottom: 0.5em;
+
+        h4 {
+            padding-top: 0;
+            margin-bottom: 2em;
+        }
+
+        img {
+            margin-bottom: 0.5em;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+            padding-bottom: 0;
+
+            h4 {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .industries {
+        padding: 2.5em 0 4.25em 0;
+
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .industry {
+            width: calc(90% / 4);
+            float: left;
+            margin: 0 1.6666666667%;
+
+            h4 {
+                font-size: 1.2861em;
+                letter-spacing: -0.95px;
+                text-align: center;
+                padding-top: 0.65em;
+            }
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}

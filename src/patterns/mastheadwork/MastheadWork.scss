@@ -1,0 +1,53 @@
+.masthead-work {
+    .client {
+        padding-top: 2em;
+
+        img {
+            height: 1.1904761905em;
+            margin-bottom: 1em;
+            width: auto;
+        }
+
+        span {
+            display: none;
+        }
+    }
+
+    h1 {
+        font-family: 'GT Super Display Super';
+        font-weight: 900;
+        font-size: 1.785em;
+        line-height: 106.5%;
+        letter-spacing: -1.56px;
+        text-align: center;
+        padding-bottom: 2em;
+        padding-top: 0.6em;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .masthead-work {
+        .client {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            padding-top: 8em;
+
+            img {
+                height: 2em;
+                margin-bottom: 0;
+                width: auto;
+            }
+        }
+
+        h1 {
+            font-size: 6.275vw;
+            line-height: 106.5%;
+            letter-spacing: -1.96px;
+            text-align: center;
+            padding-bottom: 2em;
+            padding-top: 0.6em;
+        }
+    }
+}

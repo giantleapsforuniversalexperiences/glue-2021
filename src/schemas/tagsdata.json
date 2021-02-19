@@ -1,0 +1,11 @@
+{
+    "Main" : {
+      "tag_name" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph",
+          "label" : "Name"
+        }
+      }
+    }
+  }

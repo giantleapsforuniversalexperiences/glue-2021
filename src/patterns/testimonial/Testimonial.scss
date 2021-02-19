@@ -1,0 +1,84 @@
+.quote {
+    padding: 3em 0 2.95em 0;
+    margin: 0;
+
+    .quote-wrapper {
+        .quote-text {
+            text-align: center;
+
+            &::before {
+                content: '\201C';
+            }
+
+            &::after {
+                content: '\201D';
+            }
+        }
+
+        .quote-author {
+            font-size: 0.7619047619em;
+            text-align: center;
+            padding-top: 0.7619047619em;
+        }
+    }
+
+    .client {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-top: 0;
+
+        img {
+            height: 1.1904761905em;
+            margin-bottom: 0;
+            width: auto;
+            max-width: 6em;
+        }
+
+        span {
+            display: none;
+        }
+    }
+}
+
+.dark {
+    .quote {
+        color: #ffffff;
+
+        .client {
+            filter: invert(100%) brightness(100%) grayscale(100%);
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .quote {
+        padding: 6.875em 0 8em 0;
+
+        .quote-wrapper {
+            .quote-author {
+                font-size: 1em;
+                padding-top: 2.4em;
+                margin-bottom: 2em;
+            }
+
+            .client {
+                padding-top: 0em;
+
+                img {
+                    height: 1.75em;
+                    max-width: 7.5em;
+                }
+            }
+        }
+    }
+
+    .quote-text {
+        font-size: 2.4761904762em;
+        line-height: 1.1875em;
+        letter-spacing: -2.5px;
+        margin: 0 auto;
+        width: 75%;
+    }
+}

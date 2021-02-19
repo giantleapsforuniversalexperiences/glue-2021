@@ -1,0 +1,108 @@
+.our-clients {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+    column-gap: 1em;
+    padding: 1.25em 0 0 0;
+
+    .client-entry {
+        padding-bottom: 3.15em;
+
+        p {
+            font-size: 0.619047619em;
+            line-height: 1.35em;
+            color: #434C58;
+        }
+
+        .client {
+            img {
+                margin-bottom: 0.5em;
+                height: 1.1904761905em;
+                width: auto;
+                max-width: 6em;
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        .link-wrapper {
+            display: block;
+            margin-bottom: 1em;
+
+            &:last-of-type {
+                margin-bottom: -0.25em;
+            }
+        }
+
+        .link {
+            position: relative;
+            top: 0;
+            left: 1.6em;
+
+            &::before {
+                content: '';
+                background: transparent url(/images/glue_link.svg) no-repeat center;
+                background-size: contain;
+                width: 1.0657142857em;
+                height: 0.4047619048em;
+                display: inline-block;
+                position: absolute;
+                top: 0.3885714286em;
+                left: -1.5em;
+            }
+        }
+    }
+}
+
+.dark {
+    .our-clients {
+        .client-entry {
+            p {
+                color: #ffffff;
+            }
+        }
+
+        .client {
+            filter: invert(100%) brightness(100%) grayscale(100%);
+        }
+
+        .link {
+            color: #ffffff;
+
+            &::before {
+                filter: invert(100%) brightness(100%) grayscale(100%);
+            }
+
+            &:hover {
+                color: #0038F0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .our-clients {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 4em;
+        padding: 3.75em 0 0 0;
+
+        .client-entry {
+            padding-bottom: 6em;
+
+            p {
+                font-size: 0.9047619048em;
+                letter-spacing: -0.7px;
+            }
+
+            .client {
+                .img {
+                    margin-bottom: 1em;
+                    height: 1.75em;
+                    max-width: 7.5em;
+                }
+            }
+        }
+    }
+}

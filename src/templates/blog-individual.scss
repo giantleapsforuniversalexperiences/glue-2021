@@ -1,0 +1,165 @@
+.blog-individual {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    animation: fadePage 0.75s ease-in-out;
+
+    h2 {
+        font-family: 'Karmilla';
+        font-weight: bold;
+        font-size: 1.125em;
+        letter-spacing: -1px;
+        line-height: 1.35em;
+        width: 100%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    h3 {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0.6em;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding-top: 1em;
+    }
+
+    figure {
+        margin: 2.675em 0;
+
+        figcaption {
+            background-color: hsla(0, 0%, 0%, 0.04);
+            font-size: 0.8em;
+            font-style: italic;
+            border-radius: 3px;
+            margin-top: 1em;
+            padding: 0.7em 1em 0.6em 1em;
+            width: calc(100% - 2em);
+            position: relative;
+            left: 1em;
+        }
+    }
+
+    ul,
+    ol {
+        font-weight: bold;
+    }
+
+    ul {
+        margin-bottom: 0;
+    }
+
+    blockquote {
+        display: block;
+        margin-left: 1rem;
+        margin-right: 1.45rem;
+        margin-top: 1.8em;
+        padding-bottom: 0;
+        padding-left: 1rem;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 2rem;
+        border-left: 3px solid #050C17;
+        font-size: 1.275em;
+        letter-spacing: -0.4px;
+        line-height: 130%;
+    }
+
+    .content {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .blog-individual {
+        padding-top: 8.5em;
+        width: calc(100% - 9em);
+
+        h2 {
+            font-size: 2em;
+            margin-top: 3em;
+            letter-spacing: -1.4px;
+            line-height: 1.3em;
+        }
+
+        h3 {
+            margin-top: 1.675em;
+        }
+
+        p {
+            font-size: 1.2em;
+            letter-spacing: -0.7px;
+            line-height: 1.45em;
+            margin-bottom: 1.125em;
+
+            small {
+                font-size: 0.7em;
+                letter-spacing: -0.5px;
+                line-height: 0.6em;
+            }
+        }
+
+        figure {
+            background: transparent;
+            width: 100%;
+            left: 0;
+
+            figcaption {
+                width: 100%;
+                left: 0;
+
+                p {
+                    width: 100%;
+                }
+            }
+        }
+
+        ul,
+        ol {
+            li {
+                width: calc(100% - 2.4em);
+                position: relative;
+                left: 2.4em;
+            }
+        }
+
+        blockquote {
+            position: relative;
+            left: 2em;
+            padding-right: 4em;
+            font-size: 1.375em;
+            width: 100%;
+
+            p {
+                font-size: 1em;
+                letter-spacing: -0.4px;
+                line-height: 130%;
+                max-width: none;
+                width: 100%;
+            }
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        pre,
+        ul,
+        ol,
+        blockquote,
+        figure figcaption {
+            min-width: 728px;
+            width: 50%;
+            max-width: 920px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

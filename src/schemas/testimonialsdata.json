@@ -1,0 +1,26 @@
+{
+    "Main" : {
+      "testimonial_quote" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph",
+          "label" : "Quote"
+        }
+      },
+      "testimonial_author_name" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph",
+          "label" : "Author Name"
+        }
+      },
+      "testimonial_client_logo" : {
+        "type" : "Link",
+        "config" : {
+          "select" : "document",
+          "customtypes" : [ "clients_data" ],
+          "label" : "Client Logo"
+        }
+      }
+    }
+  }

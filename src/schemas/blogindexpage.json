@@ -1,0 +1,513 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Slug"
+      }
+    },
+    "page_dark_mode" : {
+      "type" : "Boolean",
+      "config" : {
+        "default_value" : false,
+        "label" : "Dark Mode"
+      }
+    },
+    "page_meta_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Page Meta Title"
+      }
+    },
+    "page_meta_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Page Meta Description"
+      }
+    },
+    "page_social_share_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Page Social Share Image"
+      }
+    }
+  },
+  "Masthead" : {
+    "masthead_overline" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Overline (h1)"
+      }
+    },
+    "masthead_heading" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading2",
+        "labels" : [ "br" ],
+        "label" : "Heading"
+      }
+    },
+    "masthead_content" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item",
+        "label" : "Content"
+      }
+    }
+  },
+  "Blog List" : {
+    "featured_blog" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "customtypes" : [ "blog_individual_page" ],
+        "label" : "Featured Blog"
+      }
+    }
+  },
+  "Components" : {
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "blockquote" : [ ],
+          "blog_list_featured" : [ ],
+          "button" : [ ],
+          "client_list" : [ ],
+          "content" : [ ],
+          "content_image" : [ ],
+          "content_image_list" : [ ],
+          "hr" : [ ],
+          "image" : [ ],
+          "link_list" : [ ],
+          "section_title" : [ ],
+          "stat_list" : [ ],
+          "team_list" : [ ],
+          "video" : [ ],
+          "work_list_featured" : [ ],
+          "testimonial" : [ ],
+          "industry_list" : [ ]
+        },
+        "choices" : {
+          "blog_list_featured" : {
+            "type" : "Slice",
+            "fieldset" : "Blog List Featured",
+            "description" : "Tiled list of selected blogs",
+            "icon" : "format_color_text",
+            "display" : "grid",
+            "non-repeat" : { },
+            "repeat" : {
+              "blog_list_featured_article" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "blog_individual_page" ],
+                  "label" : "Blog Article"
+                }
+              }
+            }
+          },
+          "button" : {
+            "type" : "Slice",
+            "fieldset" : "Button",
+            "description" : "Singular button",
+            "icon" : "mouse",
+            "display" : "list",
+            "non-repeat" : {
+              "button_link_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Link Text"
+                }
+              },
+              "button_link_url" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Link Url"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "client_list" : {
+            "type" : "Slice",
+            "fieldset" : "Client List",
+            "description" : "Tiled list of clients with blurb",
+            "icon" : "supervisor_account",
+            "display" : "grid",
+            "non-repeat" : { },
+            "repeat" : {
+              "client_list_logo" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "clients_data" ],
+                  "label" : "Client Logo"
+                }
+              },
+              "client_list_content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item",
+                  "label" : "Content"
+                }
+              },
+              "client_list_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Link Text"
+                }
+              },
+              "client_list_url" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Link Url"
+                }
+              }
+            }
+          },
+          "content" : {
+            "type" : "Slice",
+            "fieldset" : "Content",
+            "description" : "Free content block",
+            "icon" : "text_fields",
+            "display" : "list",
+            "non-repeat" : {
+              "content_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "labels" : [ "br" ],
+                  "label" : "Title"
+                }
+              },
+              "content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, list-item, o-list-item",
+                  "labels" : [ "small", "mark", "br" ],
+                  "label" : "Content"
+                }
+              },
+              "content_link_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Link Text"
+                }
+              },
+              "content_link_url" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Link Url"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "content_image" : {
+            "type" : "Slice",
+            "fieldset" : "Content + Image",
+            "description" : "Single content with image",
+            "icon" : "chrome_reader_mode",
+            "display" : "list",
+            "non-repeat" : {
+              "content_image_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading4",
+                  "labels" : [ "br" ],
+                  "label" : "Title"
+                }
+              },
+              "content_image_content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item",
+                  "label" : "Content"
+                }
+              },
+              "content_image_link_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph, strong",
+                  "label" : "Link Text"
+                }
+              },
+              "content_image_link_url" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Link Url"
+                }
+              },
+              "content_image_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "content_image_list" : {
+            "type" : "Slice",
+            "fieldset" : "Content + Image List",
+            "description" : "Tiled list of content with image",
+            "icon" : "library_books",
+            "display" : "grid",
+            "repeat" : {
+              "content_image_list_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              },
+              "content_image_list_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading4",
+                  "labels" : [ "br" ],
+                  "label" : "Title"
+                }
+              },
+              "content_image_list_content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item",
+                  "label" : "Content"
+                }
+              }
+            }
+          },
+          "hr" : {
+            "type" : "Slice",
+            "fieldset" : "HR",
+            "description" : "Dividing line",
+            "icon" : "remove",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : { }
+          },
+          "image" : {
+            "type" : "Slice",
+            "fieldset" : "Image",
+            "description" : "Image with caption",
+            "icon" : "image",
+            "display" : "list",
+            "non-repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              },
+              "image_caption" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph, strong, em, hyperlink",
+                  "label" : "Caption"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "industry_list" : {
+            "type" : "Slice",
+            "fieldset" : "Industry List",
+            "description" : "Tiled list of industries",
+            "icon" : "account_balance",
+            "display" : "grid",
+            "non-repeat" : { },
+            "repeat" : {
+              "industry_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              },
+              "industry_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading4",
+                  "labels" : [ "br" ],
+                  "label" : "Title"
+                }
+              }
+            }
+          },
+          "link_list" : {
+            "type" : "Slice",
+            "fieldset" : "Link List",
+            "description" : "Vertical list of links",
+            "icon" : "insert_link",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "link_list_link_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Link Text"
+                }
+              },
+              "link_list_link_url" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Link Url"
+                }
+              }
+            }
+          },
+          "section_title" : {
+            "type" : "Slice",
+            "fieldset" : "Section Title",
+            "description" : "Title to introduce a section",
+            "icon" : "title",
+            "display" : "list",
+            "non-repeat" : {
+              "section_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3",
+                  "labels" : [ "br" ],
+                  "label" : "Title"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "stat_list" : {
+            "type" : "Slice",
+            "fieldset" : "Stat List",
+            "description" : "Tiled list of stats",
+            "icon" : "looks_one",
+            "display" : "grid",
+            "non-repeat" : { },
+            "repeat" : {
+              "stat_list_stat_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Stat Text"
+                }
+              },
+              "stat_list_content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item",
+                  "label" : "Content"
+                }
+              },
+              "stat_list_link_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Link Text"
+                }
+              },
+              "stat_list_link_url" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Link Url"
+                }
+              }
+            }
+          },
+          "team_list" : {
+            "type" : "Slice",
+            "fieldset" : "Team List",
+            "description" : "Tiled list of team members",
+            "icon" : "tag_faces",
+            "display" : "grid",
+            "non-repeat" : { },
+            "repeat" : {
+              "team_member" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "team_data" ],
+                  "label" : "Team Member"
+                }
+              }
+            }
+          },
+          "testimonial" : {
+            "type" : "Slice",
+            "fieldset" : "Testimonial",
+            "description" : "Client testimonial",
+            "icon" : "format_quote",
+            "display" : "list",
+            "non-repeat" : {
+              "testimonial" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "testimonials_data" ],
+                  "label" : "Testimonial"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "video" : {
+            "type" : "Slice",
+            "fieldset" : "Video",
+            "description" : "YouTube or Vimeo embed with caption",
+            "icon" : "play_circle_filled",
+            "display" : "list",
+            "non-repeat" : {
+              "video_youtube_or_vimeo_video" : {
+                "type" : "Embed",
+                "config" : {
+                  "label" : "YouTube or Vimeo Video"
+                }
+              },
+              "video_caption" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph, strong, em, hyperlink",
+                  "label" : "Caption"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "work_list_featured" : {
+            "type" : "Slice",
+            "fieldset" : "Work List Featured",
+            "description" : "Tiled list of selected work",
+            "icon" : "work",
+            "display" : "grid",
+            "non-repeat" : { },
+            "repeat" : {
+              "work_list_featured_article" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "work_individual_page" ],
+                  "label" : "Work Article"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

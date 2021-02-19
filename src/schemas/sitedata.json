@@ -1,0 +1,59 @@
+{
+    "Main" : {
+      "site_meta_title" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1",
+          "label" : "Site Meta Title"
+        }
+      },
+      "site_meta_description" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph",
+          "label" : "Site Meta Description"
+        }
+      },
+      "site_social_share_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Site Social Share Image"
+        }
+      }
+    },
+    "Nav" : {
+      "nav_menu" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "nav_link_text" : {
+              "type" : "StructuredText",
+              "config" : {
+                "single" : "paragraph",
+                "label" : "Link Text"
+              }
+            },
+            "nav_link_url" : {
+              "type" : "Link",
+              "config" : {
+                "label" : "Link Url"
+              }
+            }
+          },
+          "label" : "Nav"
+        }
+      }
+    },
+    "Footer" : { },
+    "Cookiebar" : {
+      "cookie_message" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph, hyperlink",
+          "label" : "Message"
+        }
+      }
+    }
+  }

@@ -1,0 +1,58 @@
+.masthead {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .page-intro {
+        padding-top: 0;
+        margin-bottom: 2.125em;
+        margin-top: 2.4rem;
+        width: 100%;
+    }
+
+    .img {
+        position: absolute;
+        top: 0;
+        left: -1em;
+        right: -1em;
+        z-index: -1;
+        height: 100%;
+
+        .gatsby-image {
+            height: 100%;
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .masthead {
+        .page-intro {
+            font-size: 1.2em;
+            line-height: 1.4285714286em;
+            padding-top: 1em;
+            margin-bottom: 4em;
+            width: 50%;
+        }
+
+        .img {
+            left: -4.5em;
+            right: -4.5em;
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) and (max-width: 1440px) {
+    .masthead {
+        .page-intro {
+            width: 75%;
+        }
+    }
+}

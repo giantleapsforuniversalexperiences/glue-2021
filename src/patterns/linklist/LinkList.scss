@@ -1,0 +1,70 @@
+.link-block {
+    margin: 0 0 1.75em 0;
+    padding: 1.45em 0 2em;
+    font-size: 1.2em;
+    line-height: 1.45em;
+    letter-spacing: -1.125px;
+    color: #03070D;
+    width: 100%;
+    position: relative;
+    left: 0;
+    display: block;
+
+    h3 {
+        margin-top: 1.125em;
+    }
+
+    .link-wrapper {
+        display: block;
+        margin-bottom: 1em;
+    
+        &:last-of-type {
+            margin-bottom: -0.25em;
+        }
+    }
+
+    .link {
+        position: relative;
+        top: 0;
+        left: 1.6em;
+
+        &::before {
+            content: '';
+            background: transparent url(/images/glue_link.svg) no-repeat center;
+            background-size: contain;
+            width: 1.0657142857em;
+            height: 0.4047619048em;
+            display: inline-block;
+            position: absolute;
+            top: 0.3885714286em;
+            left: -1.5em;
+        }
+    }
+}
+
+.dark {
+    .link-block {
+        .link {
+            color: #ffffff;
+
+            &::before {
+                filter: invert(100%) brightness(100%) grayscale(100%);
+            }
+
+            &:hover {
+                color: #0038F0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .link-block {
+        padding: 0 0 4.125em;
+
+        .link p {
+            font-size: 1.1428571429em;
+            width: auto;
+        }
+    }
+}

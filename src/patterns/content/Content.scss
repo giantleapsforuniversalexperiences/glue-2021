@@ -1,0 +1,95 @@
+.content {
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+
+    .intro h2 {
+        font-family: 'Karmilla';
+        font-weight: bold;
+        font-size: 1.4761904762em;
+        line-height: 1.1875em;
+        letter-spacing: -1.75px;
+        margin: 1.25rem 0 1.25rem 0;
+        padding: 0;
+    }
+
+    .text {
+        a {
+            display: inline;
+            color: #03070D;
+            text-decoration: none;
+            background-image: linear-gradient(rgb(138,146,157), rgb(138,146,157)),linear-gradient(#0038F0, #0038F0);
+            background-size: 100% 2px, 0 2px;
+            background-position: 100% 100%, 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 0.3s linear, background-position-x 0.3s linear;
+
+            &:hover {
+                color: #0038F0;
+                background-size: 0 2px, 100% 2px;
+                background-position: 100% 100%, 0 100%;
+            }
+        }
+    }
+
+    .link-wrapper {
+        margin-bottom: 0;
+    }
+
+    .link {
+        position: relative;
+        top: 0;
+        left: 1.6em;
+
+        &::before {
+            content: '';
+            background: transparent url(/images/glue_link.svg) no-repeat center;
+            background-size: contain;
+            width: 1.0657142857em;
+            height: 0.4047619048em;
+            display: inline-block;
+            position: absolute;
+            top: 0.3885714286em;
+            left: -1.5em;
+        }
+    }
+}
+
+.dark {
+    .content {
+        .link {
+            color: #ffffff;
+
+            &::before {
+                filter: invert(100%) brightness(100%) grayscale(100%);
+            }
+
+            &:hover {
+                color: #0038F0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .content {
+        padding-top: 5.875em;
+        margin-bottom: 2.35em;
+
+        .intro h2 {
+            font-size: 2.4761904762em;
+            line-height: 1.1875em;
+            letter-spacing: -2.5px;
+            margin: 1.25rem 0 1.75rem 0;
+            width: 75%;
+        }
+
+        .link-wrapper {
+            margin-bottom: 1.875em;
+        }
+
+        .link p {
+            font-size: 1.1428571429em;
+            width: auto;
+        }
+    }
+}

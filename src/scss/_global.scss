@@ -1,0 +1,126 @@
+*:hover,
+*:hover::after {
+    transition: all 175ms ease-in;
+}
+
+*:focus {
+    outline: none;
+    background: transparent;
+}
+
+:-webkit-any-link {
+    text-decoration: none;
+}
+
+.link,
+.tile a h3,
+.insights-tile a h3,
+.featured-tile a .hero-wrapper h3 {
+    display: inline;
+    color: #03070D;
+    text-decoration: none;
+    background-image: linear-gradient(rgb(138, 146, 157), rgb(138, 146, 157)), linear-gradient(#0038F0, #0038F0);
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s linear, background-position-x 0.3s linear;
+}
+
+.link:hover,
+.tile a:hover h3,
+.insights-tile a:hover h3,
+.featured-tile a:hover .hero-wrapper h3 {
+    color: #0038F0;
+    background-size: 0 2px, 100% 2px;
+    background-position: 100% 100%, 0 100%;
+}
+
+::selection {
+    background: #D8DDE6;
+    color: #03070D;
+}
+
+::-moz-selection {
+    background: #D8DDE6;
+    color: #03070D;
+}
+
+img::selection {
+    background: transparent;
+}
+
+img::-moz-selection {
+    background: transparent;
+}
+
+::marker {
+    color: #0038F0;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+    color: #03070D;
+}
+
+body.dark {
+    background-color: #03070D;
+    color: #ffffff;
+}
+
+br {
+    display: none;
+    height: 0;
+    font-size: 0;
+}
+
+main {
+    padding: 1.5em 1em 0em 1em;
+    animation: fadePage 0.75s ease-in-out;
+}
+
+@media only screen and (min-width: 920px) {
+    main {
+        width: calc(100% - 9em);
+        margin: 0 auto;
+        padding: 5em 0 0 0;
+    }
+
+    h1 {
+        padding-top: 2.5em;
+        margin-bottom: 1.275rem;
+        font-size: 1.675em;
+    }
+
+    h2 {
+        font-size: 5.65em;
+        width: 65%;
+    }
+
+    h3 {
+        font-size: 1.675em;
+        line-height: 1.2275em;
+        letter-spacing: -1.95px;
+        width: 60%;
+        margin-top: 4.25em;
+    }
+
+    h4 {
+        font-size: 1.6em;
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    br {
+        display: block;
+    }
+
+    ul,
+    ol {
+        margin-left: 2.4em;
+    }
+}

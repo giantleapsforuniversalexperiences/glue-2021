@@ -1,0 +1,26 @@
+{
+    "Main" : {
+      "team_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Image"
+        }
+      },
+      "team_name" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1",
+          "label" : "Name"
+        }
+      },
+      "team_job_title" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph",
+          "label" : "Job Title"
+        }
+      }
+    }
+  }

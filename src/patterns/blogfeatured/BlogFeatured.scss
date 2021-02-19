@@ -1,0 +1,128 @@
+.featured-tile a:hover .hero-wrapper h3 {
+    color: #0038F0;
+}
+
+.featured-tile {
+    width: 100%;
+    background: transparent;
+    margin: 2em auto 0 auto;
+    display: block;
+    overflow: hidden;
+}
+
+.featured-tile a {
+    position: relative;
+    width: 100%;
+}
+
+.featured-tile a:after {
+    content: '';
+    display: none;
+}
+
+.featured-tile a .hero-wrapper {
+    position: relative;
+    top: 1.125em;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.featured-tile a .hero-wrapper h3 {
+    font-size: 123.809523809523807%;
+    line-height: 100%;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 0;
+    margin: 0 auto;
+    color: #050C17;
+}
+
+.featured-tile a .hero-wrapper p,
+.featured-tile a .hero-wrapper p span {
+    text-decoration: none;
+}
+
+.featured-tile a .hero-wrapper p {
+    color: #8A929D;
+    text-decoration: none;
+    margin-bottom: 1.25em;
+    margin-top: 1em;
+}
+
+.featured-tile a:-webkit-any-link .hero-wrapper p,
+.featured-tile a:any-link .hero-wrapper p {
+    text-decoration: none !important;
+}
+
+@media only screen and (min-width: 920px) {
+    .featured-tile {
+        background: #000000;
+        margin: 4em auto 0 auto;
+        display: flex;
+    }
+
+    .featured-tile a:after {
+        content: '';
+        display: block;
+        height: 66%;
+        width: 66%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(330deg, rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.75) 100%);
+    }
+
+    // .featured-tile a img {
+    //     position: relative;
+    //     top: 0;
+    //     left: 0;
+    //     bottom: 0;
+    //     right: 0;
+    //     margin: 0 0 -8px 0;
+    //     opacity: 1;
+    // }
+
+    .featured-tile a:hover img {
+        opacity: 0.3;
+        transition: opacity 0.3s;
+        -webkit-transition: opacity 0.3s;
+    }
+
+    .featured-tile a .hero-wrapper {
+        position: absolute;
+        width: 70%;
+        top: 4em;
+        left: 5em;
+        bottom: 4em;
+        right: auto;
+    }
+
+    .featured-tile a .hero-wrapper h3 {
+        font-size: 2.675em;
+        padding: 0;
+        margin: 0 0 1em 0;
+        color: #fff;
+        text-decoration: none;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), linear-gradient(#0038F0, #0038F0);
+        background-size: 100% 2px, 0 2px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 0.3s linear, background-position-x 0.3s linear;
+    }
+
+    .featured-tile a:hover .hero-wrapper h3 {
+        color: #ffffff;
+        background-size: 0 2px, 100% 2px;
+        background-position: 100% 100%, 0 100%;
+    }
+
+    .featured-tile a .hero-wrapper p {
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 2em;
+    }
+}
