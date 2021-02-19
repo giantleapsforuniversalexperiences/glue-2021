@@ -115,7 +115,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	blogIndexPage.data.allPrismicBlogIndexPage.nodes.forEach((page) => createPage({
 		path: `/${blogIndexSlug}`,
 		component: path.resolve(__dirname, 'src/templates/blog-index.js'),
-		context: { id: page.id, featuredBlogUid: page?.data?.featured_blog?.document?.uid },
+		context: { id: page.id, featuredBlogUid: page.data.featured_blog.document.uid },
 	}));
 
 
