@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import loadable from '@loadable/component';
 
+import Image from 'components/image/Image';
+
 import './BlogFeatured.scss';
 
-const Image = loadable(() => import('components/image/Image'));
+// const Image = loadable(() => import('components/image/Image'));
 const Link = loadable(() => import('components/link/Link'));
 
 const defaultProps = {
