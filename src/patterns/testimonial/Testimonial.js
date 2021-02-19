@@ -30,7 +30,7 @@ function Testimonial({
     quote,
 }) {
     const clientLogoAlt = (clientLogo?.alt) ? clientLogo?.alt : '';
-    const clientLogoUrl = clientLogo?.url;
+    const clientLogoUrl = `${clientLogo?.url}&q=65&w=200`;
 
     return (
         <>
@@ -47,7 +47,7 @@ function Testimonial({
                 )}
                 {clientLogo && (
                     <div className="client">
-                        <img src={clientLogoUrl} alt={clientLogoAlt} />
+                        <img src={clientLogoUrl} alt={clientLogoAlt} loading="lazy" />
                         {clientName && (
                             <span>{clientName}</span>
                         )}

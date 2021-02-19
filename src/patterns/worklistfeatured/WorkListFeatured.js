@@ -31,7 +31,7 @@ function WorkListFeatured({
                     const data = (work_list_featured_article)? work_list_featured_article : related_posts_article;
                     const clientLogo = data?.document?.data?.masthead_client_logo?.document?.data?.client_logo;
                     const clientLogoAlt = (clientLogo?.alt) ? clientLogo?.alt : '';
-                    const clientLogoUrl = clientLogo?.url;
+                    const clientLogoUrl = `${clientLogo?.url}&q=65&w=200`;
                     const clientName = data?.document?.data?.masthead_client_logo?.document?.data?.client_name?.text;
                     const image = data?.document?.data?.masthead_image;
                     const imageAlt = (image?.alt) ? image?.alt : '';
@@ -65,7 +65,7 @@ function WorkListFeatured({
                                 )}
                                 {clientLogoUrl && (
                                     <div className="client">
-                                        <img src={clientLogoUrl} alt={clientLogoAlt} />
+                                        <img src={clientLogoUrl} alt={clientLogoAlt} loading="lazy" />
                                         {clientName && (
                                             <span>{clientName}</span>
                                         )}

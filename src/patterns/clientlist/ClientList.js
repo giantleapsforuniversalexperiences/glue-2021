@@ -29,7 +29,7 @@ function ClientList({
                     const content = client_list_content?.raw;
                     const clientLogo = client_list_logo?.document?.data?.client_logo;
                     const clientLogoAlt = (clientLogo?.alt) ? clientLogo?.alt : '';
-                    const clientLogoUrl = clientLogo?.url;
+                    const clientLogoUrl = `${clientLogo?.url}&q=65&w=200`;
                     const clientName = client_list_logo?.document?.data?.client_name?.text;
                     const linkText = client_list_text?.text;
                     const linkUrl = client_list_url;
@@ -38,7 +38,7 @@ function ClientList({
                         <div className="client-entry" key={`${clientName}${index}`}>
                             {clientLogo && (
                                 <div className="client">
-                                    <img src={clientLogoUrl} alt={clientLogoAlt} />
+                                    <img src={clientLogoUrl} alt={clientLogoAlt} loading="lazy" />
                                     {clientName && (
                                         <span>{clientName}</span>
                                     )}
