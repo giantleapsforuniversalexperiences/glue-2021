@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import loadable from '@loadable/component';
-import ReactPlayer from 'react-player/lazy';
 
 import './Video.scss';
 
@@ -24,11 +23,23 @@ function Video({
     className,
     video,
 }) {
+    const videoUrl = video?.split('src=')[1].split(/[ >]/)[0].slice(1,-1);
+
     return (
         <>
             {video && (
                 <figure className={`video ${className}`}>
-                    <ReactPlayer className="video-tile" url={video} />
+                    <div className="video-tile">
+                        <iframe
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen={true}
+                            frameBorder="0"
+                            loading="lazy"
+                            mozallowfullscreen="true"
+                            src={videoUrl}
+                            webkitallowfullscreen="true"
+                        />
+                    </div>
                     {caption && (
                         <figcaption>
                             <Content content={caption} />

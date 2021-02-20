@@ -445,7 +445,7 @@ export const query = graphql`
 								raw
 							}
 							video_youtube_or_vimeo_video {
-								embed_url
+								html
 							}
 						}
 						slice_type
