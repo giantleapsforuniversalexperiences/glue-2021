@@ -9,18 +9,21 @@ const Content = loadable(() => import('components/content/Content'));
 const defaultProps = {
     caption: [],
     className: '',
+    title: '',
     video: '',
 };
 
 const propTypes = {
     caption: PropTypes.array,
     className: PropTypes.string,
+    title: PropTypes.string,
     video: PropTypes.string,
 };
 
 function Video({
     caption,
     className,
+    title,
     video,
 }) {
     const videoUrl = video?.split('src=')[1].split(/[ >]/)[0].slice(1,-1);
@@ -37,6 +40,7 @@ function Video({
                             loading="lazy"
                             mozallowfullscreen="true"
                             src={videoUrl}
+                            title={title}
                             webkitallowfullscreen="true"
                         />
                     </div>

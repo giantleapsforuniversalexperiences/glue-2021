@@ -446,6 +446,7 @@ export const query = graphql`
 							}
 							video_youtube_or_vimeo_video {
 								html
+								title
 							}
 						}
 						slice_type
