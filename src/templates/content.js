@@ -66,6 +66,12 @@ export const query = graphql`
     query($id: String!) {
 		prismicSiteData {
             ...HeaderQuery
+		}
+		prismicSiteData {
+            ...FooterQuery
+		}
+		prismicSiteData {
+            ...CookiebarQuery
         }
         prismicContentPage(id: { eq: $id }) {
             data {

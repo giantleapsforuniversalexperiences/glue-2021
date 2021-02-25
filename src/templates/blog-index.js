@@ -108,6 +108,12 @@ export const query = graphql`
     query($id: String!, $featuredBlogUid: String) {
 		prismicSiteData {
             ...HeaderQuery
+		}
+		prismicSiteData {
+            ...FooterQuery
+		}
+		prismicSiteData {
+            ...CookiebarQuery
         }
         prismicBlogIndexPage(id: { eq: $id }) {
             data {

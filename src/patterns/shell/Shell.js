@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import SEO from 'patterns/seo/SEO';
-// import Cookiebar from 'organisms/cookiebar/Cookiebar';
-// import Footer from 'organisms/footer/Footer';
+import Cookiebar from 'patterns/cookiebar/Cookiebar';
+import Footer from 'patterns/footer/Footer';
 import Header from 'patterns/header/Header';
 
 const defaultProps = {
@@ -34,6 +34,8 @@ function Shell({
     seoTitle,
     siteData,
 }) {
+    const showCookiePopup = siteData?.data?.show_cookie_popup;
+
     return (
         <>
             <SEO
@@ -45,15 +47,10 @@ function Shell({
             />
             <Header siteData={siteData} />
             {children}
-            {/* 
-            <div className="l-shell__header">
-                <Header />
-            </div>
-            <div className="l-shell__main">
-                {children}
-                <Cookiebar />
-            </div>
-            <Footer className="l-shell__footer" /> */}
+            {showCookiePopup && (
+                <Cookiebar siteData={siteData} />
+            )}
+            <Footer siteData={siteData} />
         </>
     );
 }

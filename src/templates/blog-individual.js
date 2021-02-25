@@ -112,6 +112,12 @@ export const query = graphql`
 		prismicSiteData {
             ...HeaderQuery
         }
+        prismicSiteData {
+            ...FooterQuery
+        }
+        prismicSiteData {
+            ...CookiebarQuery
+        }
         prismicBlogIndividualPage(id: { eq: $id }) {
             data {
                 masthead_heading {

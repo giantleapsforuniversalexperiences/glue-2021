@@ -44,6 +44,12 @@ export const query = graphql`
 		prismicSiteData {
             ...HeaderQuery
         }
+        prismicSiteData {
+            ...FooterQuery
+        }
+        prismicSiteData {
+            ...CookiebarQuery
+        }
     }
 `;
 

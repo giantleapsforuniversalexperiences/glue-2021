@@ -19,7 +19,7 @@ const linkResolver = ({ node, key, value } = {}) => doc => {
 			case "content_page": return returnFullPageSlug(doc.uid);
 			case "work_index_page": return returnFullPageSlug(doc.uid);
 			case "work_individual_page": return returnFullPageSlug(doc.uid);
-			default: return `/${doc.uid}`;
+			default: return `/`;
     	}
   	}
 };
