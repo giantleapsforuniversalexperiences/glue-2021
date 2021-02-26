@@ -29,7 +29,7 @@
     }
 
     figure {
-        margin: 2.675em 0;
+        margin: 2.675em -1em;
 
         figcaption {
             background-color: hsla(0, 0%, 0%, 0.04);
@@ -108,6 +108,8 @@
             background: transparent;
             width: 100%;
             left: 0;
+            margin-left: 0;
+            margin-right: 0;
 
             figcaption {
                 width: 100%;

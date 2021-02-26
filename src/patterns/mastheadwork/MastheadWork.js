@@ -28,7 +28,9 @@ function MastheadWork({
     title,
 }) {
     const clientLogoAlt = (clientLogo?.alt) ? clientLogo?.alt : '';
-    const clientLogoUrl = clientLogo?.url;
+    let clientLogoUrl = clientLogo?.url;
+    const extension = (clientLogoUrl) ? clientLogoUrl.split('.').pop().split('?')[0] : '';
+    clientLogoUrl = (extension !== 'svg') ? `${clientLogoUrl}&q=65&w=200` : clientLogoUrl;
     const imageAlt = (image?.alt) ? image?.alt : '';
     const imageHeight = image?.dimensions?.height;
     const imageUrl = image?.url;

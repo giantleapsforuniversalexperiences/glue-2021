@@ -13,6 +13,11 @@
         position: relative;
         left: 0;
     }
+
+    figure {
+        margin-left: -1em;
+        margin-right: -1em;
+    }
 }
 
 @media only screen and (min-width: 920px) {
@@ -27,6 +32,11 @@
             letter-spacing: -1.96px;
             padding-bottom: 0.6em;
             padding-top: 0.6em;
+        }
+
+        figure {
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 }

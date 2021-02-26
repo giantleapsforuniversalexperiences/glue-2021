@@ -30,7 +30,9 @@ function WorkList({
                     index++;
                     const clientLogo = work_article?.document?.data?.masthead_client_logo?.document?.data?.client_logo;
                     const clientLogoAlt = (clientLogo?.alt) ? clientLogo?.alt : '';
-                    const clientLogoUrl = `${clientLogo?.url}&q=65&w=200`;
+                    let clientLogoUrl = clientLogo?.url;
+                    const extension = (clientLogoUrl) ? clientLogoUrl.split('.').pop().split('?')[0] : '';
+                    clientLogoUrl = (extension !== 'svg') ? `${clientLogoUrl}&q=65&w=200` : clientLogoUrl;
                     const clientName = work_article?.document?.data?.masthead_client_logo?.document?.data?.client_name?.text;
                     const image = work_article?.document?.data?.masthead_image;
                     const imageAlt = (image?.alt) ? image?.alt : '';

@@ -1,6 +1,9 @@
 .masthead-work {
     .client {
-        padding-top: 2em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
 
         img {
             height: 1.1904761905em;
@@ -23,15 +26,17 @@
         padding-bottom: 2em;
         padding-top: 0.6em;
     }
+
+    figure {
+        margin-bottom: 0;
+        margin-left: -1em;
+        margin-right: -1em;
+    }
 }
 
 @media only screen and (min-width: 920px) {
     .masthead-work {
         .client {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: center;
             padding-top: 8em;
 
             img {
@@ -48,6 +53,11 @@
             text-align: center;
             padding-bottom: 2em;
             padding-top: 0.6em;
+        }
+
+        figure {
+            margin-left: -4.5em;
+            margin-right: -4.5em;
         }
     }
 }

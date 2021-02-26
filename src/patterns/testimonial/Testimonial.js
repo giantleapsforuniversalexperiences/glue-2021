@@ -30,7 +30,10 @@ function Testimonial({
     quote,
 }) {
     const clientLogoAlt = (clientLogo?.alt) ? clientLogo?.alt : '';
-    const clientLogoUrl = `${clientLogo?.url}&q=65&w=200`;
+    let clientLogoUrl = clientLogo?.url;
+    const extension = clientLogoUrl.split('.').pop().split('?')[0];
+    
+    clientLogoUrl = (extension !== 'svg') ? `${clientLogoUrl}&q=65&w=200` : clientLogoUrl;
 
     return (
         <>

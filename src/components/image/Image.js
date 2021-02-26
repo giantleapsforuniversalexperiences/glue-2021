@@ -34,6 +34,9 @@ function Image({
     const losslessWebp = true;
     const qualityDefault = 65;
     const qualityWebp = 65;
+    const extension = imageUrl.split('.').pop().split('?')[0];
+
+    console.log(extension);
 
     if (typeof window !== 'undefined') {
         supportsPicture = window?.HTMLPictureElement ? true : null;

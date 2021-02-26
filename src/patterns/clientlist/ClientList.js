@@ -29,7 +29,9 @@ function ClientList({
                     const content = client_list_content?.raw;
                     const clientLogo = client_list_logo?.document?.data?.client_logo;
                     const clientLogoAlt = (clientLogo?.alt) ? clientLogo?.alt : '';
-                    const clientLogoUrl = `${clientLogo?.url}&q=65&w=200`;
+                    let clientLogoUrl = clientLogo?.url;
+                    const extension = (clientLogoUrl) ? clientLogoUrl.split('.').pop().split('?')[0] : '';
+                    clientLogoUrl = (extension !== 'svg') ? `${clientLogoUrl}&q=65&w=200` : clientLogoUrl;
                     const clientName = client_list_logo?.document?.data?.client_name?.text;
                     const linkText = client_list_text?.text;
                     const linkUrl = client_list_url;

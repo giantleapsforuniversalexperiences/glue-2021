@@ -53,6 +53,17 @@ img::-moz-selection {
     background: transparent;
 }
 
+.img {
+    .gatsby-image-wrapper {
+        display: block;
+        width: 100%;
+
+        > div {
+            max-width: none !important;
+        }
+    }
+}
+
 ::marker {
     color: #0038F0;
 }
