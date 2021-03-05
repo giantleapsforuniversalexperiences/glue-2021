@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { withUnpublishedPreview } from 'gatsby-source-prismic';
 import BlogIndexPage from 'templates/blog-index';
 import BlogIndividualPage from 'templates/blog-individual';
+import ContactPage from 'templates/contact';
 import ContentPage from 'templates/content';
 import HomePage from 'templates/home';
 import WorkIndexPage from 'templates/work-index';

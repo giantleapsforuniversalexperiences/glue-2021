@@ -136,6 +136,23 @@ exports.createPages = async ({ graphql, actions }) => {
 	}));
 
 
+	// Contact - create all contact pages
+	const contactPages = await graphql(`{
+		allPrismicContactPage {
+			nodes {
+				id
+				uid
+			}
+		}
+	}`);
+
+	contactPages.data.allPrismicContactPage.nodes.forEach((page) => createPage({
+		path: `/${page.uid}`,
+		component: path.resolve(__dirname, 'src/templates/contact.js'),
+		context: { id: page.id },
+	}));
+
+
 	// linkResolver sitemap -  generate a sitemap json file which is used in the linkResolver to apply the correct URLs for links in pages
 	const allPages = await graphql(`{
 		allPrismicBlogIndexPage {
@@ -164,6 +181,11 @@ exports.createPages = async ({ graphql, actions }) => {
 			}
 		}
 		allPrismicWorkIndividualPage {
+			nodes {
+				uid
+			}
+		}
+		allPrismicContactPage {
 			nodes {
 				uid
 			}
@@ -220,6 +242,15 @@ exports.createPages = async ({ graphql, actions }) => {
 			sitemap.pages.push({
 				uid: uid,
 				slug: `/${workIndexSlug}/${uid}`,
+			});
+		});
+
+		result.data.allPrismicContactPage.nodes.forEach((page) => {
+			const uid = page.uid;
+			
+			sitemap.pages.push({
+				uid: uid,
+				slug: `/${uid}`,
 			});
 		});
 

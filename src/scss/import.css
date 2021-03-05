@@ -37,70 +37,17 @@
     #work-single .client { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; padding-top: 0; }
 
     /* Links */
-    .contact-block .link-wrapper { margin-top: 1.5em; }
-    .contact-block .link, .client-entry .link { position: relative; top: 0; left: 1.6em; }
-    .contact-block .link { font-size: 1em; }
-    .client-entry .link::before, .contact-block .link::before {
+    .client-entry .link { position: relative; top: 0; left: 1.6em; }
+    .client-entry .link::before {
         content: ''; background: transparent url(/images/glue_link.svg) no-repeat center; background-size: contain;
         width: 1.0657142857em; height: 0.4047619048em; display: inline-block; position: absolute; top: 0.3885714286em; left: -1.5em;
     }
 
     /* Content blocks */
-    .contact-block { margin-top: 1.5em; margin-bottom: 5em; }
-    .contact-block h4 { margin-bottom: 2em; font-size: 1.785em; }
-    .contact-block hr { margin: 2.5em 0 2em; }
     .page-img { margin-bottom: 6.5em; }
     .page-img img { margin-bottom: -8px; }
     #related h3 { margin-top: 0; }
 
-
-    /* Form */
-    form { margin-top: 0; padding-top: 0.865em; }
-    form fieldset { border: none; padding: 1em 0; margin: 2em 0 1em 0; }
-    form fieldset:nth-of-type(1) { padding-top: 0; margin-top: 0; }
-    form fieldset legend { font-weight: bold; font-size: 1.385em; line-height: 1.2275em; letter-spacing: -1.95px; margin-bottom: 1em; }
-    form fieldset label { font-size: 0.75em; font-family: 'Karmilla'; font-weight: bold; display: block; margin-bottom: 1em; }
-    form fieldset label input, form fieldset label textarea { 
-        background: #F8FAFD;
-        font-size: 1.25em; font-weight: normal; letter-spacing: -0.65px;
-        width: 100%; padding: 12px 20px; margin-top: 2px;
-        border: 2px solid #D8DDE6;
-        -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;
-        box-shadow: 0px 0px 0px 4px rgba(0,56,240,0); -webkit-box-shadow: 0px 0px 0px 4px rgba(0,56,240,0); -moz-box-shadow: 0px 0px 0px 4px rgba(0,56,240,0);
-    }
-    form fieldset label textarea { resize:vertical; }
-    ::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder { opacity: 1; color: #77869B; }
-    form fieldset label input:hover, form fieldset label textarea:hover { border-color: #77869B; cursor: pointer; }
-    form fieldset label input:focus, form fieldset label textarea:focus { border-color: #0038F0; background: #ffffff; box-shadow: 0px 0px 0px 4px rgba(0,56,240,0.14); -webkit-box-shadow: 0px 0px 0px 4px rgba(0,56,240,0.14); -moz-box-shadow: 0px 0px 0px 4px rgba(0,56,240,0.14); }
-    .g_textarea { margin-top: 2.125em; }
-    form fieldset label { font-weight: normal; }
-    form fieldset label a { color: #03070D; font-weight: bold; }
-    form fieldset label a:hover { color: #0038F0; }
-    form fieldset button { margin-top: 2.5em; }
-    .b-contain *, .b-contain *::before, .b-contain *::after { box-sizing:content-box !important; }
-    .b-contain input { position:absolute; top: 0; left: 0; z-index:-1; opacity:0; }
-    .b-contain span { line-height:1.54; font-size:1rem; font-family:inherit; }
-    .b-contain { display:table; position:relative; padding-left:1.89rem; cursor:pointer; margin-bottom:1.35em; }
-    .b-contain input[type="checkbox"] ~ .b-input { position:absolute; top:0; left:0; height:1.25rem; width:1.25rem; background:rgba(248, 250, 253, 1); transition:background 250ms; border:2px solid rgba(216, 221, 230, 1); border-radius:0.125rem; }
-    .b-contain input[type="radio"] ~ .b-input { position:absolute; top:0; left:0; height:1.25rem; width:1.25rem; background:rgba(248, 250, 253, 1); transition:background 250ms; border:2px solid rgba(216, 221, 230, 1); border-radius:2.0rem; }
-    .b-contain input[type="checkbox"] ~ .b-input::after { content:''; position:absolute; display:none; left:.45rem; top:.18rem; width:.25rem; height:.6rem; border:solid rgba(255, 255, 255, 1); border-width:0 2px 2px 0; transition:background 250ms; transform:rotate(45deg); }
-    .b-contain input[type="radio"] ~ .b-input::after { content:''; position:absolute; display:none; left:.25rem; top:.25rem; width:.75rem; height:.75rem; border-radius:2.0rem; background:rgba(255, 255, 255, 1); transition:background 250ms; }
-    .b-contain input:disabled ~ .b-input::after { border-color:rgba(135, 149, 161, 1); }
-    .b-contain input:checked ~ .b-input::after { display:block; }
-    .b-contain:hover input ~ .b-input { background:rgba(248, 250, 253, 1); border-color: #77869B; }
-    .b-contain input:focus ~ .b-input { background:rgba(255, 255, 255, 1); box-shadow:0 0 0 4px rgba(0, 56, 240, 0.14); }
-    .b-contain input:checked ~ .b-input { background:rgba(0, 56, 240, 1); border-color:rgba(0, 56, 240, 1); }
-    .b-contain input[type="checkbox"]:disabled ~ .b-input { background: rgba(241, 245, 248, 1); border-color: rgba(135, 149, 161, 1); opacity: 0.6; cursor: not-allowed; }
-    .b-contain input[type="radio"]:disabled ~ .b-input { background: rgba(241, 245, 248, 1); border-color: rgba(135, 149, 161, 1); opacity: 0.6; cursor: not-allowed; }
-    .b-contain input[type="radio"]:disabled ~ .b-input::after { background: rgba(135, 149, 161, 1); }
-    .b-contain input:checked:focus ~ .b-input, .b-contain:hover input:not([disabled]):checked ~ .b-input { background: rgba(0, 56, 240, 1); border-color: rgba(0, 56, 240, 1); }
-    .b-contain .b-input::before {
-        content: ''; display: block; position: absolute; left: 0; top: 0;
-        width: 3rem; height: 3rem; margin-left: -0.85rem; margin-top: -0.85rem;
-        background: rgba(0, 56, 240, 0.28); border-radius: 2rem;
-        opacity: 0.5; z-index: 99999; transform: scale(0);
-    }
-    .g_checkboxes legend { margin-bottom: 0.35em; }
     
     /* Media queries */
      
@@ -110,27 +57,16 @@
     figure { margin-bottom: 0; padding-bottom: 0; display: block; }
     figure ~ figure { margin-bottom: 0; padding-bottom: 0; }
     figure ~ figure img { margin-bottom: 0; display: block; }
-    #insights, .content-list { display: grid; justify-items: stretch; column-gap: 2em; padding: 1.5em 0 0 0; }
+    #insights { display: grid; justify-items: stretch; column-gap: 2em; padding: 1.5em 0 0 0; }
     .insights-tile { width: 100%; left: 0; }
     
     .insights-tile a p span { font-size: 1em; }
     #work-single .quote .client { padding-top: 0em; }
-    .contact-block .link { font-size: 1.75em; }
-    
-    
-    
-    .content-list .content-block.contact-block .link::before {
-        width: 1em;
-        height: 0.75em;
-        top: 0.275em;
-    }
     
     }
     
     @media only screen and (min-width: 920px) and (max-width: 1440px) {
     h2 { width: 100%; }
-    .content-list .content-block.contact-block .link { font-size: 1.375em; }
-    
     }   
     
     /* FAKE  */

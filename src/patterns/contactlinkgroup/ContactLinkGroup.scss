@@ -1,0 +1,42 @@
+.contact-block {
+    margin-top: 1.5em;
+    margin-bottom: 5em;
+}
+
+.contact-block h4 {
+    margin-bottom: 2em;
+    font-size: 1.785em;
+}
+
+.contact-block hr {
+    margin: 2.5em 0 2em;
+}
+
+.contact-block .link-wrapper {
+    margin-top: 1.5em;
+}
+
+.contact-block .link {
+    position: relative;
+    top: 0;
+    left: 1.6em;
+    font-size: 1em;
+}
+
+.contact-block .link::before {
+    content: '';
+    background: transparent url(/images/glue_link.svg) no-repeat center;
+    background-size: contain;
+    width: 1.0657142857em;
+    height: 0.4047619048em;
+    display: inline-block;
+    position: absolute;
+    top: 0.3885714286em;
+    left: -1.5em;
+}
+
+@media only screen and (min-width: 920px) {
+    .contact-block .link {
+        font-size: 1.75em;
+    }
+}

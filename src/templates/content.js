@@ -46,7 +46,7 @@ function ContentPage({
 			siteData={siteData}
         >
             <main>
-                {(mastheadOverline || mastheadOverline || mastheadTitle) && (
+                {(mastheadOverline || mastheadContent || mastheadTitle) && (
                     <Masthead
                         backgroundImage={mastheadBackgroundImage}
                         content={mastheadContent}

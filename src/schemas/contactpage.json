@@ -1,0 +1,148 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "Slug"
+      }
+    },
+    "page_meta_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Page Meta Title"
+      }
+    },
+    "page_meta_description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Page Meta Description"
+      }
+    },
+    "page_social_share_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Page Social Share Image"
+      }
+    }
+  },
+  "Masthead": {
+    "masthead_overline": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Overline (h1)"
+      }
+    },
+    "masthead_heading": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading2",
+        "labels": [
+          "br"
+        ],
+        "label": "Heading"
+      }
+    }
+  },
+  "Form": {
+    "form_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading2",
+        "label": "Title"
+      }
+    },
+    "form_subtitle_1": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading3",
+        "label": "Subtitle 1"
+      }
+    },
+    "form_subtitle_2": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading3",
+        "label": "Subtitle 2"
+      }
+    },
+    "form_inquiry_options": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "form_enquiry_option": {
+            "type": "StructuredText",
+            "config": {
+              "single": "paragraph",
+              "label": "Enquiry Option"
+            }
+          }
+        },
+        "label": "Inquiry Options"
+      }
+    },
+    "form_confirmation_options": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "form_confirmation_option": {
+            "type": "StructuredText",
+            "config": {
+              "single": "paragraph, hyperlink",
+              "label": "Confirmation Option"
+            }
+          }
+        },
+        "label": "Confirmation Options"
+      }
+    }
+  },
+  "Links": {
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "link_group": []
+        },
+        "choices": {
+          "link_group": {
+            "type": "Slice",
+            "fieldset": "Link Group",
+            "description": "List of links with a title",
+            "icon": "mouse",
+            "display": "list",
+            "non-repeat": {
+              "link_group_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Title"
+                }
+              }
+            },
+            "repeat": {
+              "link_goup_link_text": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "Link Text"
+                }
+              },
+              "link_group_link_url": {
+                "type": "Link",
+                "config": {
+                  "label": "Link URL"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

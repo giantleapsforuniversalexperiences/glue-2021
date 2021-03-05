@@ -100,6 +100,7 @@ module.exports = {
                     blog_individual_page: require('./src/schemas/blogindividualpage.json'),
                     categories_data: require('./src/schemas/categoriesdata.json'),
                     clients_data: require('./src/schemas/clientsdata.json'),
+                    contact_page: require('./src/schemas/contactpage.json'),
                     content_page: require('./src/schemas/contentpage.json'),
                     home_page: require('./src/schemas/homepage.json'),
                     industries_data: require('./src/schemas/industriesdata.json'),
