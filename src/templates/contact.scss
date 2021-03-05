@@ -34,7 +34,6 @@
         justify-items: stretch;
         column-gap: 10%;
         padding: 1.5em 0 0 0;
-        margin-bottom: 0;
     }
 
     .content-list .content-block.contact-block .link::before {
@@ -46,6 +45,7 @@
     .content-list.content-equal-split {
         padding-top: 0;
         grid-template-columns: 45% 45%;
+        margin-bottom: 0;
 
         h3 {
             margin-bottom: 0.65em;
