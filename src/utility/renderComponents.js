@@ -151,6 +151,7 @@ function renderComponents(component, type) {
             <Video
                 key={`${type}-${index}`}
                 caption={component?.primary?.video_caption?.raw}
+                coverVideo={component?.primary?.video_cover_video?.url}
                 title={component?.primary?.video_youtube_or_vimeo_video?.title}
                 video={component?.primary?.video_youtube_or_vimeo_video?.html}
             />

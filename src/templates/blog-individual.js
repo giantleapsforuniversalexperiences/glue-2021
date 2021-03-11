@@ -186,6 +186,9 @@ export const query = graphql`
                             video_caption {
                                 raw
                             }
+                            video_cover_video {
+								url
+							}
                             video_youtube_or_vimeo_video {
                                 html
                                 title

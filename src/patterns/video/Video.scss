@@ -48,13 +48,55 @@
     height: auto !important;
     width: 100% !important;
 
+    > div,
     iframe,
     video {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    video {
+        z-index: 10;
+    }
+}
+
+.video__play-button {
+    background: none;
+    color: #050C17;
+    cursor: pointer;
+    font-size: 0.8em;
+    height: 60px;
+    width: 60px;
+    border: none;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: color 0.3s;
+    z-index: 20;
+
+    &:hover {
+        color: #0038F0;
+
+        &::before {
+            transform: scale(1.3);
+        }
+    }
+
+    &::before {
+        background: #ffffff;
+        border-radius: 100%;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: transform 0.3s;
+        z-index: -1;
     }
 }
 
@@ -84,5 +126,11 @@
         .work-single & {
             margin-top: -1.5em;
         }
+    }
+
+    .video__play-button {
+        font-size: 1em;
+        height: 80px;
+        width: 80px;
     }
 }

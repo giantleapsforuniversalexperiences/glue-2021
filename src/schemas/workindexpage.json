@@ -486,6 +486,14 @@
                   "label" : "YouTube or Vimeo Video"
                 }
               },
+              "video_cover_video" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "media",
+                  "label" : "Cover Video",
+                  "placeholder" : "This is a short autoplaying MP4 video that will be shown by default, clicking the play button will load the YT/Vimeo video"
+                }
+              },
               "video_caption" : {
                 "type" : "StructuredText",
                 "config" : {
