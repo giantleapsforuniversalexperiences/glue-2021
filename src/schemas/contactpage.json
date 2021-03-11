@@ -80,6 +80,14 @@
               "single": "paragraph",
               "label": "Enquiry Option"
             }
+          },
+          "form_enquiry_option_short": {
+            "type": "StructuredText",
+            "config": {
+              "single": "paragraph",
+              "label": "Enquiry Option Short",
+              "placeholder": "This short value will be sent over in the form submission"
+            }
           }
         },
         "label": "Inquiry Options"
@@ -94,6 +102,21 @@
             "config": {
               "single": "paragraph, hyperlink",
               "label": "Confirmation Option"
+            }
+          },
+          "form_confirmation_option_short": {
+            "type": "StructuredText",
+            "config": {
+              "single": "paragraph",
+              "label": "Confirmation Option Short",
+              "placeholder": "This short value will be sent over in the form submission"
+            }
+          },
+          "form_confirmation_option_required": {
+            "type": "Boolean",
+            "config": {
+              "default_value": false,
+              "label": "Required"
             }
           }
         },

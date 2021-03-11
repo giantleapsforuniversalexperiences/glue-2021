@@ -27,52 +27,57 @@ function ContactForm({
     formInquiryOptions,
     formConfirmationOptions,
 }) {
-    let index = 0;
+    let inquiryIndex = 0;
+    let termsIndex = 0;
+    const formEndPoint = 'https://getform.io/f/149f3856-bb7e-4ca3-958a-e006af3a2202';
 
     return (
         <>
-            <form>
+            <form action={formEndPoint} method="POST">
                 <fieldset>
                     {formSubtitle1 && (
                         <legend>{formSubtitle1}</legend>
                     )}
-                    <label>First name<br /><input type="text" name="firstName" /></label>
-                    <label>Last name<br /><input type="text" name="lastName" /></label>
+                    <label>First name<br /><input type="text" name="first_name" /></label>
+                    <label>Last name<br /><input type="text" name="last_name" /></label>
                     <label>Company<br /><input type="text" name="company" /></label>
-                    <label>Job title<br /><input type="text" name="jobTitle" /></label>
-                    <label>Phone number<br /><input type="tel" name="phoneNumber" /></label>
-                    <label>Work email<br /><input type="email" name="workEmail" /></label>
+                    <label>Job title<br /><input type="text" name="job_title" /></label>
+                    <label>Phone number<br /><input type="tel" name="phone_number" /></label>
+                    <label>Work email<br /><input type="email" name="work_email" /></label>
                 </fieldset>
                 <Hr />
                 <fieldset className="g_checkboxes">
                     {formSubtitle2 && (
                         <legend>{formSubtitle2}</legend>
                     )}
-                    {formInquiryOptions.map(({ form_enquiry_option }) => {
-                        index++;
+                    {formInquiryOptions.map(({ form_enquiry_option, form_enquiry_option_short }) => {
+                        inquiryIndex++;
                         const optionText = form_enquiry_option?.text;
+                        const optionShortText = form_enquiry_option_short?.text;
 
                         return (
-                            <label className="b-contain" key={`${optionText}${index}`}>
+                            <label className="b-contain" key={`${optionText}${inquiryIndex}`}>
                                 <span>{optionText}</span>
-                                <input type="checkbox" name={`inquiryType_${optionText.toLowerCase().replace(/[^A-Z0-9]+/ig, "_")}`} value={optionText} />
+                                <input type="checkbox" name={`inquiry_type_${inquiryIndex}`} value={(optionShortText) ? optionShortText : optionText} />
                                 <div className="b-input"></div>
                             </label>
                         );
                     })}
-                    <label className="g_textarea">Your message<br /><textarea name="textArea" rows="4" ></textarea></label>
+                    <label className="g_textarea">Your message<br /><textarea name="message" rows="4" ></textarea></label>
                 </fieldset>
                 <Hr />
                 <fieldset className="g_checkboxes">
-                    {formConfirmationOptions.map(({ form_confirmation_option }) => {
-                        index++;
+                    {formConfirmationOptions.map(({ form_confirmation_option, form_confirmation_option_short, form_confirmation_option_required }) => {
+                        termsIndex++;
                         const optionRaw = form_confirmation_option?.raw;
                         const optionText = form_confirmation_option?.text;
+                        const optionShortText = form_confirmation_option_short?.text;
+                        const isRequired = form_confirmation_option_required;
 
                         return (
-                            <label className="b-contain" key={`${optionText}${index}`}>
+                            <label className="b-contain" key={`${optionText}${termsIndex}`}>
                                 <span><Content content={optionRaw} /></span>
-                                <input type="checkbox" name={`inquiryType_${optionText.toLowerCase().replace(/[^A-Z0-9]+/ig, "_")}`} value={optionText} />
+                                <input type="checkbox" name={`terms_${termsIndex}`} value={(optionShortText) ? optionShortText : optionText} required={isRequired} />
                                 <div className="b-input"></div>
                             </label>
                         );

@@ -120,9 +120,16 @@ export const query = graphql`
                         raw
                         text
                     }
+                    form_confirmation_option_short {
+                        text
+                    }
+                    form_confirmation_option_required
                 }
                 form_inquiry_options {
                     form_enquiry_option {
+                        text
+                    }
+                    form_enquiry_option_short {
                         text
                     }
                 }
