@@ -53,10 +53,10 @@ function ContentImageList({
                                     />
                                 </div>
                             )}
-                            {title && (
+                            {title?.[0]?.text && (
                                 <Content content={title} />
                             )}
-                            {content && (
+                            {content?.[0]?.text && (
                                 <Content content={content} />
                             )}
                         </div>

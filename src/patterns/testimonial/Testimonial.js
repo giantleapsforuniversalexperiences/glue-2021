@@ -4,8 +4,6 @@ import loadable from '@loadable/component';
 
 import './Testimonial.scss';
 
-const Image = loadable(() => import('components/image/Image'));
-
 const defaultProps = {
     authorName: '',
     className: '',

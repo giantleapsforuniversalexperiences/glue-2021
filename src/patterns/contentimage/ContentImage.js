@@ -43,10 +43,10 @@ function ContentImage({
         <>
             <div className={`content-list ${className}`}>
                 <div className="content-block">
-                    {title && (
+                    {title?.[0]?.text && (
                         <Content content={title} />
                     )}
-                    {content && (
+                    {content?.[0]?.text && (
                         <Content content={content} />
                     )}
                     {(linkText && (linkUrl?.url || linkUrl?.uid)) && (

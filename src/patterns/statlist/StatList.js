@@ -38,7 +38,7 @@ function StatList({
                             {statText && (
                                 <h3>{statText}</h3>
                             )}
-                            {content && (
+                            {content?.[0]?.text && (
                                 <Content content={content} />
                             )}
                             {(linkText && (linkUrl?.url || linkUrl?.uid)) && (

@@ -44,7 +44,7 @@ function Cookiebar({
     return (
         <>
             <div className={`cookiebar ${hiddenClassName}`}>
-                {cookieMessage && (
+                {cookieMessage?.[0]?.text && (
                     <Content content={cookieMessage} />
                 )}
                 <button onClick={dismissCookiebar}>{buttonText}</button>

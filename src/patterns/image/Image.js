@@ -44,7 +44,7 @@ function Image({
                         }}
                         size="xxlarge"
                     />
-                    {caption && (
+                    {caption?.[0]?.text && (
                         <figcaption>
                             <Content content={caption} />
                         </figcaption>

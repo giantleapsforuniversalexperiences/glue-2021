@@ -197,6 +197,14 @@
                   "label" : "Content"
                 }
               },
+              "content_more" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, list-item, o-list-item",
+                  "label" : "More Content",
+                  "placeholder" : "This content will be hidden and shown when the user clicks the \"read more\" button"
+                }
+              },
               "content_link_text" : {
                 "type" : "StructuredText",
                 "config" : {

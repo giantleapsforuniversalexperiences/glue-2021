@@ -32,7 +32,6 @@ function Video({
 }) {
     const videoUrl = video?.split('src=')[1].split(/[ >]/)[0].slice(1,-1);
     const [isPlayingEmbed, setIsPlayingEmbed] = useState(false);
-    const embedControls = (coverVideo) ? false : true;
 
     function playEmbed() {
         setIsPlayingEmbed(!isPlayingEmbed);
@@ -76,7 +75,7 @@ function Video({
                             </>
                         )}
                     </div>
-                    {caption && (
+                    {caption?.[0]?.text && (
                         <figcaption>
                             <Content content={caption} />
                         </figcaption>

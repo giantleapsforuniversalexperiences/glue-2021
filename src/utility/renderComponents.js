@@ -53,6 +53,7 @@ function renderComponents(component, type) {
             <Content
                 key={`${type}-${index}`}
                 content={component?.primary?.content?.raw}
+                contentMore={component?.primary?.content_more?.raw}
                 linkText={component?.primary?.content_link_text?.text}
                 linkUrl={component?.primary?.content_link_url}
                 title={component?.primary?.content_title?.raw}

@@ -38,12 +38,12 @@ function Masthead({
                 {overline && (
                     <h1>{overline}</h1>
                 )}
-                {title && (
+                {title?.[0]?.text && (
                     <Content
                         content={title}
                     />
                 )}
-                {content[0] && (
+                {content?.[0]?.text && (
                     <Content
                         className="page-intro"
                         content={content}

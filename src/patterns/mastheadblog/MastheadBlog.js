@@ -4,7 +4,6 @@ import loadable from '@loadable/component';
 
 import './MastheadBlog.scss';
 
-const Content = loadable(() => import('components/content/Content'));
 const Image = loadable(() => import('components/image/Image'));
 
 const defaultProps = {

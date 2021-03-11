@@ -46,7 +46,7 @@ function ClientList({
                                     )}
                                 </div>
                             )}
-                            {content && (
+                            {content?.[0]?.text && (
                                 <Content content={content} />
                             )}
                             {(linkText && (linkUrl?.url || linkUrl?.uid)) && (

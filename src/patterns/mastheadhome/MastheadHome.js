@@ -22,7 +22,7 @@ function MastheadHome({
 }) {
     return (
         <>
-            {title && (
+            {title?.[0]?.text && (
                 <Content
                     className="hero"
                     content={title}

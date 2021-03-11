@@ -241,6 +241,9 @@ export const query = graphql`
 							content {
 								raw
 							}
+							content_more {
+								raw
+							}
 							content_link_text {
                                 text
                             }

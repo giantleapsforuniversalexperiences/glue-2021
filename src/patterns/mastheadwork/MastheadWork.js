@@ -47,7 +47,7 @@ function MastheadWork({
                         )}
                     </div>
                 )}
-                {title && (
+                {title?.[0]?.text && (
                     <Content
                         content={title}
                     />

@@ -50,7 +50,7 @@ function IndustryList({
                                     size="medium"
                                 />
                             )}
-                            {title && (
+                            {title?.[0]?.text && (
                                 <Content content={title} />
                             )}
                         </div>

@@ -52,6 +52,35 @@
             left: -1.5em;
         }
     }
+
+    .read-more {
+        background: none;
+        border: none;
+        display: inline-block;
+        color: #03070D;
+        text-decoration: none;
+        background-image: linear-gradient(rgb(138,146,157), rgb(138,146,157)),linear-gradient(#0038F0, #0038F0);
+        background-size: 100% 2px, 0 2px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 0.3s linear, background-position-x 0.3s linear;
+        padding: 0;
+        cursor: pointer;
+
+        &:hover {
+            color: #0038F0;
+            background-size: 0 2px, 100% 2px;
+            background-position: 100% 100%, 0 100%;
+        }
+
+        & + .text {
+            margin-top: 1.25rem;
+        }
+
+        & + .link-wrapper {
+            margin-top: 1em;
+        }
+    }
 }
 
 .dark {
