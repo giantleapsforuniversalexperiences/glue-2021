@@ -30,12 +30,12 @@
 
 @keyframes fadePage {
     0% {
-        opacity: 0;
-        padding-top: 5em;
+        opacity: 0.0001;
+        transform: translateY(5em);
     }
 
-    40% {
-        opacity: 0;
+    20% {
+        opacity: 0.0001;
     }
 
     70% {
@@ -44,7 +44,7 @@
 
     100% {
         opacity: 1;
-        padding-top: 1.5em;
+        transform: translateY(1.5em);
     }
 }
 
