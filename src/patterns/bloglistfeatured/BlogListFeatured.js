@@ -56,7 +56,6 @@ function BlogListFeatured({
                                                 },
                                                 url: imageUrl,
                                             }}
-                                            size="medium"
                                         />
                                     </div>
                                 )}

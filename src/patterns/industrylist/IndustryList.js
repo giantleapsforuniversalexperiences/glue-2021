@@ -47,7 +47,6 @@ function IndustryList({
                                         },
                                         url: imageUrl,
                                     }}
-                                    size="medium"
                                 />
                             )}
                             {title?.[0]?.text && (

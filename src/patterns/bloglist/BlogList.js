@@ -55,7 +55,6 @@ function BlogList({
                                                 },
                                                 url: imageUrl,
                                             }}
-                                            size="medium"
                                         />
                                     </div>
                                 )}

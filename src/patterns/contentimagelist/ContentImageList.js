@@ -49,7 +49,7 @@ function ContentImageList({
                                             },
                                             url: imageUrl,
                                         }}
-                                        size="medium"
+                                        size="large"
                                     />
                                 </div>
                             )}

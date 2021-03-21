@@ -61,7 +61,7 @@ function WorkListFeatured({
                                                 },
                                                 url: imageUrl,
                                             }}
-                                            size="medium"
+                                            size="large"
                                         />
                                     </div>
                                 )}

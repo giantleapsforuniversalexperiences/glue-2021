@@ -48,6 +48,26 @@
     }
 }
 
+@keyframes fadeBlogPage {
+    0% {
+        opacity: 0.0001;
+        transform: translateY(5em);
+    }
+
+    20% {
+        opacity: 0.0001;
+    }
+
+    70% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes b-ripple {
     0% {
         transform: scale(0);

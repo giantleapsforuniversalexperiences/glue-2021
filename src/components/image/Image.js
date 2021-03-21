@@ -32,8 +32,8 @@ function Image({
     const imageWidth = image?.dimensions?.width;
     let supportsPicture = true;
     const losslessWebp = true;
-    const qualityDefault = 65;
-    const qualityWebp = 65;
+    const qualityDefault = 85;
+    const qualityWebp = 85;
     const extension = imageUrl.split('.').pop().split('?')[0];
 
     if (typeof window !== 'undefined') {
@@ -42,6 +42,8 @@ function Image({
 
     const defaultImagePath = (function(size) {
         switch(size) {
+            case 'xxlarge':
+                return `${imageUrl}&q=${qualityDefault}&w=375 375w, ${imageUrl}&q=${qualityDefault}&w=480 480w, ${imageUrl}&q=${qualityDefault}&w=768 768w, ${imageUrl}&q=${qualityDefault}&w=960 960w, ${imageUrl}&q=${qualityDefault}&w=1280 1280w, ${imageUrl}&q=${qualityDefault}&w=1920 1920w, ${imageUrl}&q=${qualityDefault}&w=2560 2560w`;
             case 'xlarge':
                 return `${imageUrl}&q=${qualityDefault}&w=375 375w, ${imageUrl}&q=${qualityDefault}&w=480 480w, ${imageUrl}&q=${qualityDefault}&w=768 768w, ${imageUrl}&q=${qualityDefault}&w=960 960w, ${imageUrl}&q=${qualityDefault}&w=1280 1280w, ${imageUrl}&q=${qualityDefault}&w=1920 1920w`;
             case 'large':
@@ -58,6 +60,8 @@ function Image({
     })(size);
     const webpImagePath = (function(size) {
         switch(size) {
+            case 'xxlarge':
+                return `${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=375 375w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=480 480w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=768 768w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=960 960w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=1280 1280w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=1920 1920w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=2560 2560w`;
             case 'xlarge':
                 return `${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=375 375w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=480 480w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=768 768w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=960 960w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=1280 1280w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=1920 1920w`;
             case 'large':
@@ -74,6 +78,8 @@ function Image({
     })(size);
     const sizes = (function(size) {
         switch(size) {
+            case 'xxlarge':
+                return '2560px';
             case 'xlarge':
                 return '1920px';
             case 'large':

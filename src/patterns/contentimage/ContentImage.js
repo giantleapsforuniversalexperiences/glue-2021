@@ -67,7 +67,7 @@ function ContentImage({
                                     },
                                     url: imageUrl,
                                 }}
-                                size="large"
+                                size="xlarge"
                             />
                         </div>
                     )}

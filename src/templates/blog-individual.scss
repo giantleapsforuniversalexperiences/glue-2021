@@ -1,8 +1,8 @@
 .blog-individual {
+    animation: fadeBlogPage 0.75s ease-in-out both;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    animation: fadePage 0.75s ease-in-out;
 
     h2 {
         font-family: 'Karmilla';

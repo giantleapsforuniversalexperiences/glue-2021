@@ -49,7 +49,7 @@ function Blockquote({
                                 },
                                 url: imageUrl,
                             }}
-                            size="large"
+                            size="xxlarge"
                         />
                     )}
                     {(title || date) && (

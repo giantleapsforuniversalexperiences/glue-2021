@@ -60,7 +60,6 @@ function WorkList({
                                                 },
                                                 url: imageUrl,
                                             }}
-                                            size="medium"
                                         />
                                     </div>
                                 )}
