@@ -28,12 +28,7 @@ module.exports = {
                 siteUrl: process.env.GATSBY_SITE_URL,
             },
         },
-        {
-            resolve: 'gatsby-plugin-loadable-components-ssr',
-            options: {
-                useHydrate: true,
-            },
-        },
+        'gatsby-plugin-loadable-components-ssr',
         {
             resolve: 'gatsby-plugin-manifest',
             options: {

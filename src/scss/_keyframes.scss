@@ -44,7 +44,7 @@
 
     100% {
         opacity: 1;
-        transform: translateY(1.5em);
+        transform: translateY(0);
     }
 }
 
@@ -125,12 +125,12 @@
 @media only screen and (min-width: 920px) {
     @keyframes fadePage {
         0% {
-            opacity: 0;
-            padding-top: 10em;
+            opacity: 0.0001;
+            transform: translateY(10em);
         }
 
         40% {
-            opacity: 0;
+            opacity: 0.0001;
         }
 
         70% {
@@ -139,7 +139,7 @@
 
         100% {
             opacity: 1;
-            padding-top: 5em;
+            transform: translateY(0);
         }
     }
 }

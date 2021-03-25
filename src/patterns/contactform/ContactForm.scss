@@ -95,6 +95,10 @@ form fieldset button {
     margin-top: 2.5em;
 }
 
+form input[type="text"] {
+    appearance: none;
+}
+
 .b-contain *,
 .b-contain *::before,
 .b-contain *::after {

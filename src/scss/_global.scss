@@ -90,10 +90,11 @@ br {
 }
 
 main {
+    animation: fadePage 0.75s ease-in-out;
     padding: 1.5em 1em 0em 1em;
-    animation: fadePage 0.65s ease-in-out;
+    will-change: transform;
 
-    header + & {
+    .header-sticky-point + & {
         min-height: 100vh;
     }
 }

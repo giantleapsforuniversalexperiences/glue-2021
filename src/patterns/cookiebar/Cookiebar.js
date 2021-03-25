@@ -27,12 +27,12 @@ function Cookiebar({
     const cookieMessage = data?.cookie_message?.raw;
     const cookieName = 'GlueCookiePolicy';
     const cookies = new Cookies();
-    const [isCookiebarHidden, setIsCookiebarHidden] = useState(false);
+    const [isCookiebarHidden, setIsCookiebarHidden] = useState(true);
     const hiddenClassName = isCookiebarHidden ? 'is-hidden' : '';
 
     useEffect(function() {
-        if (cookies.get(cookieName)) {
-            setIsCookiebarHidden(true);
+        if (!cookies.get(cookieName)) {
+            setIsCookiebarHidden(false);
         }
     }, []);
 
