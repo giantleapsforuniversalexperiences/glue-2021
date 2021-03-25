@@ -17,6 +17,7 @@
     outline: none;
     box-shadow: 1px 5px 32px 0px rgba(0, 0, 0, 0.17);
     margin: 0 auto;
+    margin-bottom: 2.875em;
 }
 
 .pagination:hover {
@@ -30,5 +31,10 @@
         height: 71px;
         font-size: 1.25em;
         line-height: 70px;
+        margin-bottom: 3.4em;
+
+        .tiles + & {
+            margin-top: -2.8em;
+        }
     }
 }
