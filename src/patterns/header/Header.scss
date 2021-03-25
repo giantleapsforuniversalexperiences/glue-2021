@@ -76,14 +76,15 @@
     padding: 3.25% 1em 1em 1em;
     flex-flow:column nowrap;
     align-content: stretch;
-    display: none;
+    display: flex;
     z-index: 99;
     opacity: 0;
+    transition: opacity 0.175s linear, visibility 0.175s linear;
+    visibility: hidden;
 
     &.active {
-        display: flex;
         opacity: 1;
-        animation: fadeIn 0.175s linear;
+        visibility: visible;
     }
 
     .header__logo {
@@ -225,6 +226,7 @@ body.dark {
         height: auto;
         opacity: 1;
         padding: 1.125em 0 0.875em 1em;
+        visibility: visible;
 
         .header__logo {
             display: none;
