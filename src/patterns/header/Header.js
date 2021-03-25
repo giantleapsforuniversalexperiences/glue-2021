@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { useInView } from 'react-intersection-observer';
 import loadable from '@loadable/component';
 
 import './Header.scss';
@@ -27,7 +28,11 @@ function Header({
     const navLinks = data?.nav_menu;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [menuToggleButtonText, setMenuToggleButtonText] = useState('Menu');
-	const menuOpenClassName = isMenuOpen ? 'active' : '';
+    const menuOpenClassName = isMenuOpen ? 'active' : '';
+    const [ref, inView, entry] = useInView({
+        threshold: 0,
+    });
+    const stickyClassName = (entry && !inView) ? 'is-sticky' : '';
 	
 	function toggleMenu() {
         setIsMenuOpen(!isMenuOpen);
@@ -36,7 +41,7 @@ function Header({
 
     return (
         <>
-            <header className={`header ${className}`}>
+            <header className={`header ${className} ${stickyClassName}`}>
                 <div>
                     <div className="header__logo">
                         <Link to={{ link_type: 'Document', type: 'home_page', uid: '/' }}>Glue</Link>
@@ -62,6 +67,7 @@ function Header({
                     </nav>
                 </div>
             </header>
+            <div className="header-sticky-point" ref={ref} />
         </>
     );
 }

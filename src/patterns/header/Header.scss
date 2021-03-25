@@ -2,6 +2,11 @@
     padding: 3.25% 1em 1em 1em;
 }
 
+.header-sticky-point {
+    position: absolute;
+    top: 10em;
+}
+
 .header__logo {
     a {
         background: transparent url(/images/glue_logo_dark.svg) no-repeat center;
@@ -190,12 +195,16 @@ body.dark {
 
 @media only screen and (min-width: 920px) {
     .header {
-        background: #ffffff;
         position: fixed;
         width: 100%;
         padding: 0.9em 4.5em 1em 4.5em;
         margin: 0 auto;
+        transition: background-color 0.3s linear;
         z-index: 9999;
+    }
+
+    .header.is-sticky {
+        background: #ffffff;
     }
 
     .header__logo {
@@ -266,7 +275,7 @@ body.dark {
     }
 
     body.dark {
-        .header {
+        .header.is-sticky {
             background: #03070D;
         }
 
