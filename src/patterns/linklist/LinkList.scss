@@ -17,6 +17,8 @@
     .link-wrapper {
         display: block;
         margin-bottom: 1em;
+        position: relative;
+        padding-left: 1.6em;
     
         &:last-of-type {
             margin-bottom: -0.25em;
@@ -24,10 +26,6 @@
     }
 
     .link {
-        position: relative;
-        top: 0;
-        left: 1.6em;
-
         &::before {
             content: '';
             background: transparent url(/images/glue_link.svg) no-repeat center;
@@ -36,8 +34,8 @@
             height: 0.4047619048em;
             display: inline-block;
             position: absolute;
-            top: 0.3885714286em;
-            left: -1.5em;
+            top: 0.5em;
+            left: 0.1em;
         }
     }
 }

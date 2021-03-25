@@ -42,6 +42,8 @@ function WorkIndividualPage({
 	const relatedPosts = pageData?.related_posts;
 	const relatedPostsTitle = pageData?.related_posts_title?.raw;
 
+	console.log(relatedPosts[0]?.related_posts_article?.document);
+
     return (
         <Shell
 			bodyClassName={pageDarkMode}
@@ -64,7 +66,7 @@ function WorkIndividualPage({
                     renderComponents(component, component?.slice_type)
                 ))}
             </main>
-			{relatedPosts[0] && (
+			{relatedPosts[0]?.related_posts_article?.document && (
                 <main>
                     <Hr />
                     {relatedPostsTitle && (
