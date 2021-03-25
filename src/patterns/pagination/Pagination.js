@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { InView } from 'react-intersection-observer';
 
 import './Pagination.scss';
 
@@ -67,7 +68,9 @@ function Pagination({
 
     return (
         <>
-            <button className={`pagination ${className}`} onClick={handleLoadMore} type="button">{text}</button>
+            <InView threshold={0} onChange={(inView, entry) => (inView) ? handleLoadMore() : null}>
+                <button className={`pagination ${className}`} onClick={handleLoadMore} type="button">{text}</button>
+            </InView>
         </>
     );
 }
