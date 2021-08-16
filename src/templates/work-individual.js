@@ -66,7 +66,6 @@ function WorkIndividualPage({
             </main>
 			{relatedPosts[0]?.related_posts_article?.document && (
                 <main>
-                    <Hr />
                     {relatedPostsTitle && (
                         <SectionTitle
                             title={relatedPostsTitle}
