@@ -59,7 +59,7 @@ function Masthead({
                             },
                             url: imageUrl,
                         }}
-                        size="xxlarge"
+                        size="xxxlarge"
                     />
                 )}
             </div>

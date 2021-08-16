@@ -48,7 +48,7 @@ function MastheadBlog({
                                 },
                                 url: imageUrl,
                             }}
-                            size="xxlarge"
+                            size="xxxlarge"
                         />
                     </figure>
                 )}

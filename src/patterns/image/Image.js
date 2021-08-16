@@ -42,7 +42,7 @@ function Image({
                             },
                             url: imageUrl,
                         }}
-                        size="xxlarge"
+                        size="xxxlarge"
                     />
                     {caption?.[0]?.text && (
                         <figcaption>

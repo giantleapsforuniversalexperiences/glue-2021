@@ -63,7 +63,7 @@ function MastheadWork({
                                 },
                                 url: imageUrl,
                             }}
-                            size="xxlarge"
+                            size="xxxlarge"
                         />
                     </figure>
                 )}
