@@ -43,9 +43,8 @@ function Image({
     const defaultImagePath = (function(size) {
         switch(size) {
             case 'xxxlarge':
-                return `${imageUrl}&q=${qualityDefault}&w=375 375w, ${imageUrl}&q=${qualityDefault}&w=480 480w, ${imageUrl}&q=${qualityDefault}&w=768 768w, ${imageUrl}&q=${qualityDefault}&w=960 960w, ${imageUrl}&q=${qualityDefault}&w=1280 1280w, ${imageUrl}&q=${qualityDefault}&w=1920 1920w, ${imageUrl}&q=${qualityDefault}&w=2560 2560w, ${imageUrl}&q=${qualityDefault}&w=3840 3840w`;
             case 'xxlarge':
-                return `${imageUrl}&q=${qualityDefault}&w=375 375w, ${imageUrl}&q=${qualityDefault}&w=480 480w, ${imageUrl}&q=${qualityDefault}&w=768 768w, ${imageUrl}&q=${qualityDefault}&w=960 960w, ${imageUrl}&q=${qualityDefault}&w=1280 1280w, ${imageUrl}&q=${qualityDefault}&w=1920 1920w, ${imageUrl}&q=${qualityDefault}&w=2560 2560w`;
+                return `${imageUrl}&q=${qualityDefault}&w=375 375w, ${imageUrl}&q=${qualityDefault}&w=480 480w, ${imageUrl}&q=${qualityDefault}&w=768 768w, ${imageUrl}&q=${qualityDefault}&w=960 960w, ${imageUrl}&q=${qualityDefault}&w=1280 1280w, ${imageUrl}&q=${qualityDefault}&w=1920 1920w, ${imageUrl}&q=${qualityDefault}&w=2880 2880w`;
             case 'xlarge':
                 return `${imageUrl}&q=${qualityDefault}&w=375 375w, ${imageUrl}&q=${qualityDefault}&w=480 480w, ${imageUrl}&q=${qualityDefault}&w=768 768w, ${imageUrl}&q=${qualityDefault}&w=960 960w, ${imageUrl}&q=${qualityDefault}&w=1280 1280w, ${imageUrl}&q=${qualityDefault}&w=1920 1920w`;
             case 'large':
@@ -63,9 +62,8 @@ function Image({
     const webpImagePath = (function(size) {
         switch(size) {
             case 'xxxlarge':
-                return `${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=375 375w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=480 480w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=768 768w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=960 960w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=1280 1280w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=1920 1920w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=2560 2560w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=3840 3840w`;
             case 'xxlarge':
-                return `${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=375 375w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=480 480w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=768 768w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=960 960w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=1280 1280w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=1920 1920w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=2560 2560w`;
+                return `${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=375 375w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=480 480w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=768 768w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=960 960w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=1280 1280w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=1920 1920w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=2880 2880w`;
             case 'xlarge':
                 return `${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=375 375w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=480 480w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=768 768w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=960 960w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=1280 1280w, ${imageUrl}&fm=webp&lossless=${losslessWebp}&q=${qualityWebp}&w=1920 1920w`;
             case 'large':
@@ -82,8 +80,9 @@ function Image({
     })(size);
     const sizes = (function(size) {
         switch(size) {
+            case 'xxxlarge':
             case 'xxlarge':
-                return '2560px';
+                return '2880px';
             case 'xlarge':
                 return '1920px';
             case 'large':
