@@ -7,6 +7,7 @@ const ClientList = loadable(() => import('patterns/clientlist/ClientList'));
 const Content = loadable(() => import('patterns/content/Content'));
 const ContentImage = loadable(() => import('patterns/contentimage/ContentImage'));
 const ContentImageList = loadable(() => import('patterns/contentimagelist/ContentImageList'));
+const CTA = loadable(() => import('patterns/CTA/CTA'));
 const Hr = loadable(() => import('patterns/hr/Hr'));
 const Image = loadable(() => import('patterns/image/Image'));
 const IndustryList = loadable(() => import('patterns/industrylist/IndustryList'));
@@ -20,7 +21,7 @@ const WorkListFeatured = loadable(() => import('patterns/worklistfeatured/WorkLi
 
 let index = 0;
 
-function renderComponents(component, type) {
+function renderComponents(component, type, siteData) {
     switch (type) {
     case 'blog_list_featured':
         index++;
@@ -37,6 +38,25 @@ function renderComponents(component, type) {
                 key={`${type}-${index}`}
                 text={component?.primary?.button_link_text?.text}
                 url={component?.primary?.button_link_url}
+            />
+        );
+    case 'call_to_action':
+        index++;
+        return (
+            <CTA
+                key={`${type}-${index}`}
+                buttonText={component?.primary?.cta_button_text?.text}
+                buttonUrl={component?.primary?.cta_button_url}
+                emailTitle={component?.primary?.cta_email_title?.text}
+                emailLinkText={component?.primary?.cta_email_link_text?.text}
+                emailLinkUrl={component?.primary?.cta_email_link_url}
+                linkText={component?.primary?.cta_link_text?.text}
+                linkUrl={component?.primary?.cta_link_url}
+                phoneTitle={component?.primary?.cta_phone_title?.text}
+                phoneLinkText={component?.primary?.cta_phone_link_text?.text}
+                phoneLinkUrl={component?.primary?.cta_phone_link_url}
+                title={component?.primary?.cta_title?.text}
+                siteData={siteData}
             />
         );
     case 'client_list':

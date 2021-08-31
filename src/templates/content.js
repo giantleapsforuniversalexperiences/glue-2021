@@ -452,6 +452,56 @@ export const query = graphql`
 						}
 						slice_type
 					}
+					... on PrismicContentPageBodyCallToAction {
+						primary {
+							cta_button_text {
+								text
+							}
+							cta_button_url {
+								link_type
+								type
+								uid
+								url
+							}
+							cta_email_link_text {
+								text
+							}
+							cta_email_link_url {
+								link_type
+								type
+								uid
+								url
+							}
+							cta_email_title {
+								text
+							}
+							cta_link_text {
+							text
+							}
+							cta_link_url {
+								link_type
+								type
+								uid
+								url
+							}
+							cta_phone_link_text {
+								text
+							}
+							cta_phone_link_url {
+								link_type
+								type
+								uid
+								url
+							}
+							cta_phone_title {
+								text
+							}
+							cta_title {
+								text
+							}
+						}
+						slice_type
+					}
                 }
             }
         }

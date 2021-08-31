@@ -51,7 +51,7 @@ function HomePage({
 					/>
 				)}
                 {components?.map(component => (
-                    renderComponents(component, component?.slice_type)
+                    renderComponents(component, component?.slice_type, siteData)
                 ))}
             </main>
         </Shell>
@@ -68,6 +68,9 @@ export const query = graphql`
 		}
 		prismicSiteData {
             ...CookiebarQuery
+        }
+		prismicSiteData {
+            ...CtaQuery
         }
         prismicHomePage(id: { eq: $id }) {
             data {
@@ -434,6 +437,56 @@ export const query = graphql`
 										uid
 									}
 								}
+							}
+						}
+						slice_type
+					}
+					... on PrismicHomePageBodyCallToAction {
+						primary {
+							cta_button_text {
+								text
+							}
+							cta_button_url {
+								link_type
+								type
+								uid
+								url
+							}
+							cta_email_link_text {
+								text
+							}
+							cta_email_link_url {
+								link_type
+								type
+								uid
+								url
+							}
+							cta_email_title {
+								text
+							}
+							cta_link_text {
+							text
+							}
+							cta_link_url {
+								link_type
+								type
+								uid
+								url
+							}
+							cta_phone_link_text {
+								text
+							}
+							cta_phone_link_url {
+								link_type
+								type
+								uid
+								url
+							}
+							cta_phone_title {
+								text
+							}
+							cta_title {
+								text
 							}
 						}
 						slice_type

@@ -1,0 +1,124 @@
+.cta {
+    background-color: #d8dde6;
+    padding: 2em 1em;
+    margin-left: -1em;
+    margin-right: -1em;
+
+    .cta_main {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    h2 {
+        font-family: 'Karmilla';
+        font-weight: bold;
+        font-size: 1.85em;
+        line-height: 1.1875em;
+        letter-spacing: -1.75px;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+
+    .button {
+        appearance: none;
+        background: #03070D;
+        color: #ffffff;
+        align-items: center;
+        display: inline-flex !important;
+        min-height: 60px;
+        border-radius: 2px;
+        font-family: 'Karmilla';
+        font-weight: bold;
+        font-size: 1.125em;
+        line-height: 120%;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        box-shadow: 1px 5px 32px 0px rgba(0, 0, 0, 0.17);
+        margin-bottom: 2rem;
+        padding: 0.5em 1.45em;
+    
+        &:hover {
+            background: #293445;
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+        }
+    }
+
+    .link-wrapper {
+        display: block;
+        margin-bottom: 1em;
+        position: relative;
+        padding-left: 1.6em;
+
+        &:last-of-type {
+            margin-bottom: -0.25em;
+        }
+    }
+
+    .link {
+        &::before {
+            content: '';
+            background: transparent url(/images/glue_link.svg) no-repeat center;
+            background-size: contain;
+            width: 1.0657142857em;
+            height: 0.4047619048em;
+            display: inline-block;
+            position: absolute;
+            top: 0.5em;
+            left: 0.1em;
+        }
+    }
+
+    h3 {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        display: block;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .cta {
+        padding: 3em 4.5em;
+        margin-left: 0;
+        margin-right: 0;
+        display: flex;
+
+        .cta_main {
+            border-bottom: none;
+            border-right: 1px solid rgba(0, 0, 0, 0.2);
+            margin-bottom: 0;
+            padding-bottom: 0;
+            padding-right: 1em;
+            margin-right: 2.5em;
+            width: calc(65% - 2.5em);
+        }
+
+        .cta_actions {
+            align-items: center;
+            display: flex;
+        }
+
+        h2 {
+            font-size: 2.85em;
+            max-width: 678px;
+            width: 100%;
+        }
+
+        .button {
+            margin-bottom: 0;
+            margin-right: 2em;
+        }
+
+        .cta_secondary {
+            width: 35%;
+        }
+    }
+}

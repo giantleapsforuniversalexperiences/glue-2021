@@ -55,7 +55,7 @@
     "masthead_content" : {
       "type" : "StructuredText",
       "config" : {
-        "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item",
+        "multi" : "paragraph,strong,em,hyperlink,list-item,o-list-item",
         "label" : "Content"
       }
     }
@@ -130,7 +130,8 @@
               "button_link_url" : {
                 "type" : "Link",
                 "config" : {
-                  "label" : "Link Url"
+                  "label" : "Link Url",
+                  "select" : null
                 }
               }
             },
@@ -155,7 +156,7 @@
               "client_list_content" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item",
+                  "multi" : "paragraph,strong,em,hyperlink,list-item,o-list-item",
                   "label" : "Content"
                 }
               },
@@ -169,7 +170,8 @@
               "client_list_url" : {
                 "type" : "Link",
                 "config" : {
-                  "label" : "Link Url"
+                  "label" : "Link Url",
+                  "select" : null
                 }
               }
             }
@@ -192,7 +194,7 @@
               "content" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, preformatted, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, list-item, o-list-item",
+                  "multi" : "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item",
                   "labels" : [ "small", "mark", "br" ],
                   "label" : "Content"
                 }
@@ -200,7 +202,7 @@
               "content_more" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, preformatted, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, list-item, o-list-item",
+                  "multi" : "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item",
                   "label" : "More Content",
                   "placeholder" : "This content will be hidden and shown when the user clicks the \"read more\" button"
                 }
@@ -215,7 +217,8 @@
               "content_link_url" : {
                 "type" : "Link",
                 "config" : {
-                  "label" : "Link Url"
+                  "label" : "Link Url",
+                  "select" : null
                 }
               }
             },
@@ -239,21 +242,22 @@
               "content_image_content" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item",
+                  "multi" : "paragraph,strong,em,hyperlink,list-item,o-list-item",
                   "label" : "Content"
                 }
               },
               "content_image_link_text" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "single" : "paragraph, strong",
+                  "single" : "paragraph,strong",
                   "label" : "Link Text"
                 }
               },
               "content_image_link_url" : {
                 "type" : "Link",
                 "config" : {
-                  "label" : "Link Url"
+                  "label" : "Link Url",
+                  "select" : null
                 }
               },
               "content_image_image" : {
@@ -293,7 +297,7 @@
               "content_image_list_content" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item",
+                  "multi" : "paragraph,strong,em,hyperlink,list-item,o-list-item",
                   "label" : "Content"
                 }
               }
@@ -326,7 +330,7 @@
               "image_caption" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "single" : "paragraph, strong, em, hyperlink",
+                  "single" : "paragraph,strong,em,hyperlink",
                   "label" : "Caption"
                 }
               }
@@ -377,7 +381,8 @@
               "link_list_link_url" : {
                 "type" : "Link",
                 "config" : {
-                  "label" : "Link Url"
+                  "label" : "Link Url",
+                  "select" : null
                 }
               }
             }
@@ -418,7 +423,7 @@
               "stat_list_content" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item",
+                  "multi" : "paragraph,strong,em,hyperlink,list-item,o-list-item",
                   "label" : "Content"
                 }
               },
@@ -432,7 +437,8 @@
               "stat_list_link_url" : {
                 "type" : "Link",
                 "config" : {
-                  "label" : "Link Url"
+                  "label" : "Link Url",
+                  "select" : null
                 }
               }
             }
@@ -497,7 +503,7 @@
               "video_caption" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "single" : "paragraph, strong, em, hyperlink",
+                  "single" : "paragraph,strong,em,hyperlink",
                   "label" : "Caption"
                 }
               }
@@ -521,6 +527,94 @@
                 }
               }
             }
+          },
+          "call_to_action" : {
+            "type" : "Slice",
+            "fieldset" : "Call to Action",
+            "description" : "Call to Action",
+            "icon" : "insert_link",
+            "display" : "list",
+            "non-repeat" : {
+              "cta_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Title"
+                }
+              },
+              "cta_button_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Button Text"
+                }
+              },
+              "cta_button_url" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Button Url",
+                  "select" : null
+                }
+              },
+              "cta_link_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Link Text",
+                  "placeholder" : "(Link next to button)"
+                }
+              },
+              "cta_link_url" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Link Url",
+                  "select" : null
+                }
+              },
+              "cta_email_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3",
+                  "label" : "Email Title"
+                }
+              },
+              "cta_email_link_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Email Link Text"
+                }
+              },
+              "cta_email_link_url" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Email Link Url",
+                  "select" : null
+                }
+              },
+              "cta_phone_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3",
+                  "label" : "Phone Title"
+                }
+              },
+              "cta_phone_link_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Phone Link Text"
+                }
+              },
+              "cta_phone_link_url" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Phone Link Url",
+                  "select" : null
+                }
+              }
+            },
+            "repeat" : { }
           }
         }
       }
