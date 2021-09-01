@@ -7,7 +7,7 @@ const ClientList = loadable(() => import('patterns/clientlist/ClientList'));
 const Content = loadable(() => import('patterns/content/Content'));
 const ContentImage = loadable(() => import('patterns/contentimage/ContentImage'));
 const ContentImageList = loadable(() => import('patterns/contentimagelist/ContentImageList'));
-const CTA = loadable(() => import('patterns/CTA/CTA'));
+const CTA = loadable(() => import('patterns/cta/CTA'));
 const Hr = loadable(() => import('patterns/hr/Hr'));
 const Image = loadable(() => import('patterns/image/Image'));
 const IndustryList = loadable(() => import('patterns/industrylist/IndustryList'));
