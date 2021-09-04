@@ -90,13 +90,21 @@ br {
 }
 
 main {
-    animation: fadePage 0.75s ease-in-out;
     padding: 1.5em 1em 0em 1em;
     will-change: transform;
 
     .header-sticky-point + & {
         min-height: 100vh;
     }
+}
+
+.tl-wrapper-status--exiting main {
+    animation: fadeOut 0.3s ease-in-out;
+}
+
+.tl-wrapper-status--entering main {
+    animation: fadePage 0.6s ease-in-out both;
+    opacity: 0 !important;
 }
 
 @media only screen and (min-width: 920px) {

@@ -8,6 +8,27 @@
     }
 }
 
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 0.5;
+    }
+
+    80% {
+        opacity: 0.0001;
+    }
+
+    100% {
+        opacity: 0.0001;
+        transform: translateY(1em);
+        
+    }
+}
+
 @keyframes fadeMove {
     0% {
         opacity: 0;

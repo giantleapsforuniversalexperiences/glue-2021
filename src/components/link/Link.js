@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { Link as GatsbyLink } from 'gatsby';
+import TransitionLink from 'gatsby-plugin-transition-link';
 import linkResolver from 'utility/linkResolver';
 
 const activeClassName = 'active';
@@ -48,16 +49,23 @@ const Link = forwardRef(({
     }
 
     return (
-        <GatsbyLink
+        <TransitionLink
             activeClassName={activeClassName}
             className={className}
             ref={ref}
             partiallyActive={partiallyActive}
             to={url}
             {...rest}
+            exit={{
+                length: 0.3,
+            }}
+            entry={{
+                delay: 0.3,
+                length: 0.6,
+            }}
         >
             {children}
-        </GatsbyLink>
+        </TransitionLink>
     );
 });
 

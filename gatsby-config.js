@@ -21,6 +21,7 @@ module.exports = {
         title: 'Glue',
     },
     plugins: [
+        'gatsby-plugin-transition-link',
         'gatsby-plugin-image',
         {
             resolve: 'gatsby-plugin-canonical-urls',
