@@ -6,8 +6,8 @@
     position: relative;
     top: 0;
     left: 0;
-    margin: 0 auto;
-    padding: 0.5em 1.5em;
+    margin: 4.5em auto 0 auto;
+    padding: 3rem 1.5em;
 
     ul {
         margin: 0;
@@ -28,24 +28,150 @@
     }
 }
 
+.footer__logo-container {
+    display: flex;
+}
+
+.footer__logo {
+    padding: 0.5rem 0;
+
+    a {
+        background: transparent url(/images/glue_logo_light.svg) no-repeat center;
+        background-size: contain;
+        height: 3rem;
+        width: 3rem;
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        text-indent: -9999px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.footer__logo-strapline {
+    border-left: 1px solid #434c58;
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    font-weight: bold;
+    font-size: 1.05rem;
+    line-height: 1.62;
+    letter-spacing: -0.7px;
+    display: flex;
+    align-items: center;
+
+    span {
+        max-width: 200px;
+    }
+}
+
+.footer__address {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.4em;
+    font-style: initial;
+    color: #d8dde6;
+
+    strong {
+        color: #fff;
+        display: block;
+    }
+}
+
+.footer__secondary {
+    display: flex;
+    flex-direction: column-reverse;
+
+    li {
+        margin-top: 0.75rem;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    .link {
+        font-size: 0.75rem;
+        line-height: 1.33;
+        letter-spacing: 0.13px;
+    }
+}
+
+.footer__copyright {
+    margin-top: 2.5rem;
+    color: #d8dde6;
+}
+
 @media only screen and (min-width: 920px) {
     .footer {
-        font-size: 0.75em;
-        letter-spacing: 0.125px;
+        font-size: inherit;
         text-align: left;
         width: 100%;
-        padding: 3.5em 7em 3em 7em;
-        margin: 4.5em auto 0 auto;
-        display: flex;
-        text-align: center;
+        padding: 3.75rem 4.5em 3.75rem 4.5em;
 
         ul {
             display: flex;
 
             li {
                 margin-bottom: 0;
+                margin-top: 0;
                 margin-left: 2em;
+
+                &:first-of-type {
+                    margin-left: 0;
+                }
             }
         }
+    }
+
+    .footer__main {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .footer__logo-container {
+        margin-right: 2.5em;
+        width: calc(63% - 2.5em);
+    }
+
+    .footer__logo-strapline {
+        margin-left: 2.5rem;
+        padding-left: 2.5rem;
+        font-size: 1.7rem;
+        line-height: 1.21;
+        letter-spacing: -1.75px;
+    
+        span {
+            max-width: 300px;
+        }
+    }
+
+    .footer__address {
+        width: 37%;
+        margin: 0;
+    }
+
+    .footer__secondary {
+        align-items: center;
+        flex-direction: row;
+        margin-top: 3.75rem;
+    }
+
+    .footer__copyright {
+        margin-top: 0;
+        font-size: 0.75rem;
+        line-height: 1.33;
+        letter-spacing: 0.13px;
+        margin-right: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .footer__copyright {
+        width: calc(63% - 2.5em);
     }
 }

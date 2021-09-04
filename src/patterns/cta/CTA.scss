@@ -89,17 +89,6 @@
         padding: 3em 4.5em;
         margin-left: 0;
         margin-right: 0;
-        display: flex;
-
-        .cta_main {
-            border-bottom: none;
-            border-right: 1px solid rgba(0, 0, 0, 0.2);
-            margin-bottom: 0;
-            padding-bottom: 0;
-            padding-right: 1em;
-            margin-right: 2.5em;
-            width: calc(65% - 2.5em);
-        }
 
         .cta_actions {
             align-items: center;
@@ -115,6 +104,22 @@
         .button {
             margin-bottom: 0;
             margin-right: 2em;
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .cta {
+        display: flex;
+
+        .cta_main {
+            border-bottom: none;
+            border-right: 1px solid rgba(0, 0, 0, 0.2);
+            margin-bottom: 0;
+            padding-bottom: 0;
+            padding-right: 1em;
+            margin-right: 2.5em;
+            width: calc(65% - 2.5em);
         }
 
         .cta_secondary {

@@ -48,6 +48,13 @@
     }
   },
   "Footer": {
+    "footer_address": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph, strong",
+        "label": "Address"
+      }
+    },
     "footer_menu": {
       "type": "Group",
       "config": {
@@ -88,82 +95,82 @@
     }
   },
   "Call to Action": {
-    "cta_title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading2",
-        "label" : "Title"
+    "cta_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading2",
+        "label": "Title"
       }
     },
-    "cta_button_text" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "paragraph",
-        "label" : "Button Text"
+    "cta_button_text": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Button Text"
       }
     },
-    "cta_button_url" : {
-      "type" : "Link",
-      "config" : {
-        "label" : "Button Url",
-        "select" : null
+    "cta_button_url": {
+      "type": "Link",
+      "config": {
+        "label": "Button Url",
+        "select": null
       }
     },
-    "cta_link_text" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "paragraph",
-        "label" : "Link Text",
-        "placeholder" : "(Link next to button)"
+    "cta_link_text": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Link Text",
+        "placeholder": "(Link next to button)"
       }
     },
-    "cta_link_url" : {
-      "type" : "Link",
-      "config" : {
-        "label" : "Link Url",
-        "select" : null
+    "cta_link_url": {
+      "type": "Link",
+      "config": {
+        "label": "Link Url",
+        "select": null
       }
     },
-    "cta_email_title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading3",
-        "label" : "Email Title"
+    "cta_email_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading3",
+        "label": "Email Title"
       }
     },
-    "cta_email_link_text" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "paragraph",
-        "label" : "Email Link Text"
+    "cta_email_link_text": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Email Link Text"
       }
     },
-    "cta_email_link_url" : {
-      "type" : "Link",
-      "config" : {
-        "label" : "Email Link Url",
-        "select" : null
+    "cta_email_link_url": {
+      "type": "Link",
+      "config": {
+        "label": "Email Link Url",
+        "select": null
       }
     },
-    "cta_phone_title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading3",
-        "label" : "Phone Title"
+    "cta_phone_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading3",
+        "label": "Phone Title"
       }
     },
-    "cta_phone_link_text" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "paragraph",
-        "label" : "Phone Link Text"
+    "cta_phone_link_text": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Phone Link Text"
       }
     },
-    "cta_phone_link_url" : {
-      "type" : "Link",
-      "config" : {
-        "label" : "Phone Link Url",
-        "select" : null
+    "cta_phone_link_url": {
+      "type": "Link",
+      "config": {
+        "label": "Phone Link Url",
+        "select": null
       }
     }
   }
