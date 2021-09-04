@@ -8,7 +8,7 @@ import loadable from '@loadable/component';
 
 import '../scss/main.scss';
 
-const MastheadHome = loadable(() => import('patterns/mastheadhome/MastheadHome'));
+import MastheadHome from 'patterns/mastheadhome/MastheadHome';
 
 const defaultProps = {};
 

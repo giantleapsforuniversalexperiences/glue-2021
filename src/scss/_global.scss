@@ -1,5 +1,5 @@
-*:hover,
-*:hover::after {
+a,
+a::after {
     transition: all 175ms ease-in;
 }
 
@@ -76,6 +76,7 @@ html {
 body {
     background: #ffffff;
     color: #03070D;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 body.dark {
@@ -98,7 +99,8 @@ main {
     }
 }
 
-.tl-wrapper-status--exiting main {
+.tl-wrapper-status--exiting main,
+.tl-wrapper-status--exiting .footer {
     animation: fadeOut 0.3s ease-in-out;
 }
 

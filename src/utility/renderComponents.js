@@ -1,23 +1,22 @@
 import React from 'react';
-import loadable from '@loadable/component';
 
-const BlogListFeatured = loadable(() => import('patterns/bloglistfeatured/BlogListFeatured'));
-const Button = loadable(() => import('patterns/button/Button'));
-const ClientList = loadable(() => import('patterns/clientlist/ClientList'));
-const Content = loadable(() => import('patterns/content/Content'));
-const ContentImage = loadable(() => import('patterns/contentimage/ContentImage'));
-const ContentImageList = loadable(() => import('patterns/contentimagelist/ContentImageList'));
-const CTA = loadable(() => import('patterns/cta/CTA'));
-const Hr = loadable(() => import('patterns/hr/Hr'));
-const Image = loadable(() => import('patterns/image/Image'));
-const IndustryList = loadable(() => import('patterns/industrylist/IndustryList'));
-const LinkList = loadable(() => import('patterns/linklist/LinkList'));
-const SectionTitle = loadable(() => import('patterns/sectiontitle/SectionTitle'));
-const StatList = loadable(() => import('patterns/statlist/StatList'));
-const TeamList = loadable(() => import('patterns/teamlist/TeamList'));
-const Testimonial = loadable(() => import('patterns/testimonial/Testimonial'));
-const Video = loadable(() => import('patterns/video/Video'));
-const WorkListFeatured = loadable(() => import('patterns/worklistfeatured/WorkListFeatured'));
+import BlogListFeatured from 'patterns/bloglistfeatured/BlogListFeatured';
+import Button from 'patterns/button/Button';
+import ClientList from 'patterns/clientlist/ClientList';
+import Content from 'patterns/content/Content';
+import ContentImage from 'patterns/contentimage/ContentImage';
+import ContentImageList from 'patterns/contentimagelist/ContentImageList';
+import CTA from 'patterns/cta/CTA';
+import Hr from 'patterns/hr/Hr';
+import Image from 'patterns/image/Image';
+import IndustryList from 'patterns/industrylist/IndustryList';
+import LinkList from 'patterns/linklist/LinkList';
+import SectionTitle from 'patterns/sectiontitle/SectionTitle';
+import StatList from 'patterns/statlist/StatList';
+import TeamList from 'patterns/teamlist/TeamList';
+import Testimonial from 'patterns/testimonial/Testimonial';
+import Video from 'patterns/video/Video';
+import WorkListFeatured from 'patterns/worklistfeatured/WorkListFeatured';
 
 let index = 0;
 

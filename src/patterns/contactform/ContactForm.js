@@ -4,8 +4,8 @@ import loadable from '@loadable/component';
 
 import './ContactForm.scss';
 
-const Content= loadable(() => import('components/content/Content'));
-const Hr = loadable(() => import('patterns/hr/Hr'));
+import Content from 'components/content/Content';
+import Hr from 'patterns/hr/Hr';
 
 const defaultProps = {
     formSubtitle1: '',

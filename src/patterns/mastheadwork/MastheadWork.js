@@ -4,8 +4,8 @@ import loadable from '@loadable/component';
 
 import './MastheadWork.scss';
 
-const Content = loadable(() => import('components/content/Content'));
-const Image = loadable(() => import('components/image/Image'));
+import Content from 'components/content/Content';
+import Image from 'components/image/Image';
 
 const defaultProps = {
     clientLogo: {},

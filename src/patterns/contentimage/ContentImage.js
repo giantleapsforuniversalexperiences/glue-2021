@@ -4,9 +4,9 @@ import loadable from '@loadable/component';
 
 import './ContentImage.scss';
 
-const Content = loadable(() => import('components/content/Content'));
-const Image = loadable(() => import('components/image/Image'));
-const Link = loadable(() => import('components/link/Link'));
+import Content from 'components/content/Content';
+import Image from 'components/image/Image';
+import Link from 'components/link/Link';
 
 const defaultProps = {
     className: '',

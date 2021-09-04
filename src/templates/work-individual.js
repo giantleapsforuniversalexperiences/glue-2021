@@ -9,10 +9,10 @@ import loadable from '@loadable/component';
 import '../scss/main.scss';
 import './work-individual.scss';
 
-const Hr = loadable(() => import('patterns/hr/Hr'));
-const MastheadWork = loadable(() => import('patterns/mastheadwork/MastheadWork'));
-const SectionTitle = loadable(() => import('patterns/sectiontitle/SectionTitle'));
-const WorkListFeatured = loadable(() => import('patterns/worklistfeatured/WorkListFeatured'));
+import Hr from 'patterns/hr/Hr';
+import MastheadWork from 'patterns/mastheadwork/MastheadWork';
+import SectionTitle from 'patterns/sectiontitle/SectionTitle';
+import WorkListFeatured from 'patterns/worklistfeatured/WorkListFeatured';
 
 const defaultProps = {};
 

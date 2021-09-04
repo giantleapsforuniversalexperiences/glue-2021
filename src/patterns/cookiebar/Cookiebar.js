@@ -6,7 +6,7 @@ import Cookies from 'universal-cookie';
 
 import './Cookiebar.scss';
 
-const Content = loadable(() => import('components/content/Content'));
+import Content from 'components/content/Content';
 
 const defaultProps = {
     buttonText: 'Accept & Close',

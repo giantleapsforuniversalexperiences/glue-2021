@@ -8,9 +8,9 @@ import loadable from '@loadable/component';
 
 import '../scss/main.scss';
 
-const Masthead = loadable(() => import('patterns/masthead/Masthead'));
-const Pagination = loadable(() => import('patterns/pagination/Pagination'));
-const WorkList = loadable(() => import('patterns/worklist/WorkList'));
+import Masthead from 'patterns/masthead/Masthead';
+import Pagination from 'patterns/pagination/Pagination';
+import WorkList from 'patterns/worklist/WorkList';
 
 const defaultProps = {};
 

@@ -4,11 +4,10 @@ import { withPreview } from 'gatsby-source-prismic';
 import PropTypes from 'prop-types';
 import { renderComponents } from 'utility/renderComponents';
 import Shell from 'patterns/shell/Shell';
-import loadable from '@loadable/component';
 
 import '../scss/main.scss';
 
-const Masthead = loadable(() => import('patterns/masthead/Masthead'));
+import Masthead from 'patterns/masthead/Masthead';
 
 const defaultProps = {};
 

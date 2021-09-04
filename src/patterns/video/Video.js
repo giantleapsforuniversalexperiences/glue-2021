@@ -4,8 +4,8 @@ import loadable from '@loadable/component';
 
 import './Video.scss';
 
-const ReactPlayer = loadable(() => import('react-player/lazy'));
-const Content = loadable(() => import('components/content/Content'));
+import ReactPlayer from 'react-player/lazy';
+import Content from 'components/content/Content';
 
 const defaultProps = {
     caption: [],

@@ -8,10 +8,10 @@ import loadable from '@loadable/component';
 
 import '../scss/main.scss';
 
-const BlogFeatured = loadable(() => import('patterns/blogfeatured/BlogFeatured'));
-const BlogList = loadable(() => import('patterns/bloglist/BlogList'));
-const Masthead = loadable(() => import('patterns/masthead/Masthead'));
-const Pagination = loadable(() => import('patterns/pagination/Pagination'));
+import BlogFeatured from 'patterns/blogfeatured/BlogFeatured';
+import BlogList from 'patterns/bloglist/BlogList';
+import Masthead from 'patterns/masthead/Masthead';
+import Pagination from 'patterns/pagination/Pagination';
 
 const defaultProps = {};
 

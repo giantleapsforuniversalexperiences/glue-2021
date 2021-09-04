@@ -4,8 +4,8 @@ import loadable from '@loadable/component';
 
 import './WorkList.scss';
 
-const Image = loadable(() => import('components/image/Image'));
-const Link = loadable(() => import('components/link/Link'));
+import Image from 'components/image/Image';
+import Link from 'components/link/Link';
 
 const defaultProps = {
     className: '',

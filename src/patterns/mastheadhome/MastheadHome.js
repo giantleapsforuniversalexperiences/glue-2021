@@ -4,7 +4,7 @@ import loadable from '@loadable/component';
 
 import './MastheadHome.scss';
 
-const Content = loadable(() => import('components/content/Content'));
+import Content from 'components/content/Content';
 
 const defaultProps = {
     strapline: '',

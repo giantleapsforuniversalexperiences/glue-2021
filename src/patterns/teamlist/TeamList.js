@@ -4,7 +4,7 @@ import loadable from '@loadable/component';
 
 import './TeamList.scss';
 
-const Image = loadable(() => import('components/image/Image'));
+import Image from 'components/image/Image';
 
 const defaultProps = {
     className: '',

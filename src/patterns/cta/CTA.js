@@ -5,7 +5,7 @@ import loadable from '@loadable/component';
 
 import './CTA.scss';
 
-const Link = loadable(() => import('components/link/Link'));
+import Link from 'components/link/Link';
 
 const defaultProps = {
     buttonText: '',

@@ -9,10 +9,10 @@ import loadable from '@loadable/component';
 import '../scss/main.scss';
 import './blog-individual.scss';
 
-const BlogListFeatured = loadable(() => import('patterns/bloglistfeatured/BlogListFeatured'));
-const Hr = loadable(() => import('patterns/hr/Hr'));
-const MastheadBlog = loadable(() => import('patterns/mastheadblog/MastheadBlog'));
-const SectionTitle = loadable(() => import('patterns/sectiontitle/SectionTitle'));
+import BlogListFeatured from 'patterns/bloglistfeatured/BlogListFeatured';
+import Hr from 'patterns/hr/Hr';
+import MastheadBlog from 'patterns/mastheadblog/MastheadBlog';
+import SectionTitle from 'patterns/sectiontitle/SectionTitle';
 
 const defaultProps = {};
 

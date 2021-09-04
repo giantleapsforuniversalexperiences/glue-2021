@@ -4,8 +4,8 @@ import loadable from '@loadable/component';
 
 import './ContactLinkGroup.scss';
 
-const Hr = loadable(() => import('patterns/hr/Hr'));
-const Link = loadable(() => import('components/link/Link'));
+import Hr from 'patterns/hr/Hr';
+import Link from 'components/link/Link';
 
 const defaultProps = {
     links: [],

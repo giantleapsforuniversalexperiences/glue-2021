@@ -4,8 +4,8 @@ import loadable from '@loadable/component';
 
 import './Image.scss';
 
-const Content = loadable(() => import('components/content/Content'));
-const ImageComponent = loadable(() => import('components/image/Image'));
+import Content from 'components/content/Content';
+import ImageComponent from 'components/image/Image';
 
 const defaultProps = {
     caption: [],

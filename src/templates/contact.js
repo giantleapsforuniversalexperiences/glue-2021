@@ -8,9 +8,9 @@ import loadable from '@loadable/component';
 import '../scss/main.scss';
 import './contact.scss';
 
-const ContactForm = loadable(() => import('patterns/contactform/ContactForm'));
-const ContactLinkGroup = loadable(() => import('patterns/contactlinkgroup/ContactLinkGroup'));
-const Masthead = loadable(() => import('patterns/masthead/Masthead'));
+import ContactForm from 'patterns/contactform/ContactForm';
+import ContactLinkGroup from 'patterns/contactlinkgroup/ContactLinkGroup';
+import Masthead from 'patterns/masthead/Masthead';
 
 const defaultProps = {};
 

@@ -4,8 +4,8 @@ import loadable from '@loadable/component';
 
 import './ClientList.scss';
 
-const Content = loadable(() => import('components/content/Content'));
-const Link = loadable(() => import('components/link/Link'));
+import Content from 'components/content/Content';
+import Link from 'components/link/Link';
 
 const defaultProps = {
     className: '',
