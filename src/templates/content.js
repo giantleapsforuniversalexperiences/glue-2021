@@ -54,7 +54,7 @@ function ContentPage({
                     />
                 )}
                 {components?.map(component => (
-                    renderComponents(component, component?.slice_type)
+                    renderComponents(component, component?.slice_type, siteData)
                 ))}
             </main>
         </Shell>
@@ -71,6 +71,9 @@ export const query = graphql`
 		}
 		prismicSiteData {
             ...CookiebarQuery
+        }
+		prismicSiteData {
+            ...CtaQuery
         }
         prismicContentPage(id: { eq: $id }) {
             data {

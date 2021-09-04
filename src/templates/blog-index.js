@@ -97,7 +97,7 @@ function BlogIndexPage({
                     </>
                 )}
                 {components?.map(component => (
-                    renderComponents(component, component?.slice_type)
+                    renderComponents(component, component?.slice_type, siteData)
                 ))}
             </main>
         </Shell>
@@ -114,6 +114,9 @@ export const query = graphql`
 		}
 		prismicSiteData {
             ...CookiebarQuery
+        }
+		prismicSiteData {
+            ...CtaQuery
         }
         prismicBlogIndexPage(id: { eq: $id }) {
             data {
