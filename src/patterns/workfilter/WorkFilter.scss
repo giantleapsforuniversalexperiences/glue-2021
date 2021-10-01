@@ -1,0 +1,249 @@
+.work-filter {
+    margin-top: 4rem;
+}
+
+.work-filter__filter-button,
+.work-filter__filter-group-button {
+    background: none;
+    border: none;
+    padding: 0;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.7rem;
+    letter-spacing: -0.7px;
+    color: #03070d;
+    width: 100%;
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.work-filter__filter-button {
+    &.active {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.work-filter__filters {
+    margin-top: 1.5rem;
+}
+
+.work-filter__filter-group {
+    margin-top: 1rem;
+}
+
+.work-filter__filter-group-button {
+    cursor: pointer;
+    font-weight: 400;
+    padding-left: 2rem;
+}
+
+.work-filter__filter-group-list {
+    display: none;
+    list-style: none;
+    margin: 0;
+
+    &.open {
+        display: block;
+    }
+}
+
+.work-filter__filter-group-item {
+    margin-bottom: 0;
+    margin-top: 1.2rem;
+
+    .b-contain {
+        padding-left: 2rem;
+        width: 100%;
+    }
+
+    .b-input {
+        top: 50% !important;
+        transform: translateY(-50%);
+    }
+}
+
+.work-filter__filter-group-label {
+    align-items: center;
+    display: flex;
+    font-size: 0.9rem !important;
+    line-height: 1.222 !important;
+    width: 100%;
+}
+
+.work-filter__filter-group-count {
+    font-size: 0.9rem !important;
+    line-height: 1.222 !important;
+    margin-left: auto;
+    padding-left: 0.5rem;
+}
+
+.work-filter__active-filters {
+    margin-top: 2rem;
+}
+
+.work-filter__active-filters-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: -0.5rem 0 0 -0.5rem;
+}
+
+.work-filter__active-filters-item {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.work-filter__active-filters-button {
+    background: #0038f0;
+    border: 2px solid #0038f0;
+    border-radius: 2rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.1rem 0.75rem;
+    transition: all 0.3s;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        background-color: transparent;
+        color: #0038f0;
+    }
+
+    svg {
+        margin-left: 0.5rem;
+        pointer-events: none;
+    }
+}
+
+@media only screen and (max-width: 919px) {
+    .work-filter__filters {
+        display: none;
+
+        &.open {
+            display: block;
+        }
+    }
+
+    .work-filter__desktop-filter-group-buttons {
+        display: none;
+    }
+
+    .work-filter__filter-group {
+        &.hidden {
+            display: none;
+        }
+    }
+
+    .work-filter__filter-group-button {
+        position: relative;
+
+        svg {
+            position: absolute;
+            right: 0;
+            transform: rotate(-90deg);
+        }
+
+        &.active {
+            svg {
+                left: 0;
+                right: auto;
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .work-filter {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .work-filter__filter-button {
+        width: auto;
+
+        svg {
+            display: none;
+        }
+    }
+
+    .work-filter__desktop-filter-group-buttons {
+        display: flex;
+    }
+
+    .work-filter__filters {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .work-filter__filter-group {
+        margin-top: 0;
+    }
+
+    .work-filter__filter-group-button {
+        padding-left: 0;
+        margin-left: 3rem;
+
+        span {
+            border-bottom: 2px solid transparent;
+        }
+
+        svg {
+            margin-left: 1rem;
+        }
+
+        &.active {
+            span {
+                border-bottom-color: currentColor;
+            }
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .work-filter__filter-group-list {
+        flex-wrap: wrap;
+        margin-left: -2.5rem;
+
+        &.open {
+            display: flex;
+        }
+    }
+
+    .work-filter__filter-group-item {
+        align-items: center;
+        display: flex;
+        flex: 0 0 33.3333333%;
+        padding-left: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .work-filter__filter-group {
+        .work-filter__filter-group-button {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .work-filter__filter-group-item {
+        align-items: center;
+        flex: 0 0 25%;
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .work-filter__filter-group-item {
+        align-items: center;
+        flex: 0 0 20%;
+    }
+}

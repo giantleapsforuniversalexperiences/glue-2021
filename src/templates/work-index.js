@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { withPreview } from 'gatsby-source-prismic';
 import PropTypes from 'prop-types';
@@ -10,6 +10,7 @@ import '../scss/main.scss';
 
 import Masthead from 'patterns/masthead/Masthead';
 import Pagination from 'patterns/pagination/Pagination';
+import WorkFilter from 'patterns/workfilter/WorkFilter';
 import WorkList from 'patterns/worklist/WorkList';
 
 const defaultProps = {};
@@ -37,10 +38,66 @@ function WorkIndexPage({
     const mastheadTitle = pageData?.masthead_heading?.raw;
     const workList = pageData?.work_list;
     const paginationSize = 9;
-    const [loadedArticles, setLoadedArticles] = useState([...workList.slice(0, paginationSize)]);
+	const [filteredWorkList, setFilteredWorkList] = useState(workList);
+    const [loadedArticles, setLoadedArticles] = useState([...filteredWorkList.slice(0, paginationSize)]);
     const [loadMore, setLoadMore] = useState(false);
-    const [hasMore, setHasMore] = useState(workList.length > 0);
+    const [hasMore, setHasMore] = useState(filteredWorkList.length > 0);
+	const [activeFilters, setActiveFilters] = useState([]);
     const components = pageData?.body;
+	const allArticleIndustryFilters = [];
+	const allArticleServiceFilters = [];
+	const industryFilters = {};
+	const serviceFilters = {};
+
+	pageData?.work_list.map(({ work_article }) => {
+		const articleIndustries = work_article?.document?.data?.page_industries;
+		const articleServices = work_article?.document?.data?.page_services;
+
+		articleIndustries.map(({ page_industry }) => {
+			if (page_industry.document) {
+				allArticleIndustryFilters.push(page_industry?.document?.data?.industry_name?.text);
+			}
+		});
+
+		articleServices.map(({ page_service }) => {
+			if (page_service.document) {
+				allArticleServiceFilters.push(page_service?.document?.data?.service_name?.text);
+			}
+		});
+	});
+
+	allArticleIndustryFilters.forEach((item) => {
+		industryFilters[item] = (industryFilters[item] || 0) + 1;
+	});
+
+	allArticleServiceFilters.forEach((item) => {
+		serviceFilters[item] = (serviceFilters[item] || 0) + 1;
+	});
+
+	useEffect(() => {
+		let tempFilteredWorkList = [];
+
+		if (activeFilters.length > 0) {
+			activeFilters.forEach((filter) => {
+				tempFilteredWorkList.push(workList.filter(item => item.work_article.document.data.page_industries.some(industry => industry?.page_industry?.document?.data.industry_name?.text === filter)));
+				tempFilteredWorkList.push(workList.filter(item => item.work_article.document.data.page_services.some(service => service?.page_service?.document?.data.service_name?.text === filter)));
+			});
+		} else {
+			tempFilteredWorkList = workList;
+		}
+
+		const flattenedTempFilteredWorkList = [].concat(...tempFilteredWorkList);
+		const jsonObject = flattenedTempFilteredWorkList.map(JSON.stringify);
+		const uniqueSet = new Set(jsonObject);
+		const uniqueArray = Array.from(uniqueSet).map(JSON.parse);
+
+		setFilteredWorkList(uniqueArray);
+	}, [activeFilters]);
+
+	useEffect(() => {
+		setLoadedArticles([...filteredWorkList.slice(0, paginationSize)]);
+		setHasMore(filteredWorkList.length > 0);
+	}, [filteredWorkList]);
 
     return (
         <Shell
@@ -59,6 +116,12 @@ function WorkIndexPage({
                         title={mastheadTitle}
                     />
                 )}
+				<WorkFilter
+					activeFilters={activeFilters}
+					setActiveFilters={setActiveFilters}
+					industries={industryFilters}
+					services={serviceFilters}
+				/>
                 {loadedArticles && (
                     <>
                         <WorkList
@@ -66,7 +129,7 @@ function WorkIndexPage({
                         />
                         {hasMore && (
                             <Pagination
-                                allArticles={workList}
+                                allArticles={filteredWorkList}
                                 hasMore={hasMore}
                                 loadMore={loadMore}
                                 loadedArticles={loadedArticles}
@@ -153,6 +216,32 @@ export const query = graphql`
                                         }
                                         url
                                     }
+									page_services {
+										page_service {
+											document {
+												... on PrismicServicesData {
+													data {
+														service_name {
+															text
+														}
+													}
+												}
+											}
+										}
+									}
+									page_industries {
+										page_industry {
+											document {
+												... on PrismicIndustriesData {
+													data {
+														industry_name {
+															text
+														}
+													}
+												}
+											}
+										}
+									}
                                 }
                                 type
                                 uid

@@ -52,7 +52,6 @@ function CTA({
     title,
     siteData,
 }) {
-    console.log(siteData)
     if (!siteData) return null;
     const data = siteData?.data;
     const buttonTextData = buttonText ? buttonText : data?.cta_button_text?.text;
@@ -66,7 +65,6 @@ function CTA({
     const phoneLinkTextData = phoneLinkText ? phoneLinkText : data?.cta_phone_link_text?.text;
     const phoneLinkUrlData = phoneLinkUrl?.url || phoneLinkUrl?.uid ? phoneLinkUrl : data?.cta_phone_link_url;
     const titleData = title ? title : data?.cta_title?.text;
-
 
     return (
         <>
