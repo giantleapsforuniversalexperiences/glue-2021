@@ -296,6 +296,14 @@ export const query = graphql`
 							client_list_content {
 								raw
 							}
+							client_list_image {
+								alt
+								dimensions {
+									height
+									width
+								}
+								url
+							}
 							client_list_logo {
 								document {
 									... on PrismicClientsData {

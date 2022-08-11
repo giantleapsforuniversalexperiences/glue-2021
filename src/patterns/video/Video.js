@@ -70,6 +70,7 @@ function Video({
                                         controls={false}
                                         playing={isPlayingEmbed}
                                         url={videoUrl}
+                                        loop={true}
                                     />
                                 )}
                             </>

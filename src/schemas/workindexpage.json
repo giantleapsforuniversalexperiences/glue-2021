@@ -153,6 +153,14 @@
             "display" : "grid",
             "non-repeat" : { },
             "repeat" : {
+              "client_list_image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Client Image"
+                }
+              },
               "client_list_logo" : {
                 "type" : "Link",
                 "config" : {

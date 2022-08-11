@@ -6,7 +6,7 @@
     position: relative;
     top: 0;
     left: 0;
-    margin: 4.5em auto 0 auto;
+    margin: 0 auto;
     padding: 3rem 1.5em;
 
     ul {
@@ -80,6 +80,10 @@
         color: #fff;
         display: block;
     }
+
+    br {
+        display: block;
+    }
 }
 
 .footer__secondary {
@@ -112,6 +116,7 @@
         text-align: left;
         width: 100%;
         padding: 3.75rem 4.5em 3.75rem 4.5em;
+        margin-top: 4.5rem;
 
         ul {
             display: flex;

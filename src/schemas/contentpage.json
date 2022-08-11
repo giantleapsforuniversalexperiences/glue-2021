@@ -67,6 +67,13 @@
         "label" : "Content"
       }
     },
+    "masthead_margin_bottom": {
+      "type": "Boolean",
+      "config": {
+        "default_value": false,
+        "label": "Add margin bottom"
+      }
+    },
     "masthead_background_image" : {
       "type" : "Image",
       "config" : {
@@ -151,6 +158,14 @@
             "display" : "grid",
             "non-repeat" : { },
             "repeat" : {
+              "client_list_image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Client Image"
+                }
+              },
               "client_list_logo" : {
                 "type" : "Link",
                 "config" : {

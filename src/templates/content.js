@@ -49,6 +49,7 @@ function ContentPage({
                     <Masthead
                         backgroundImage={mastheadBackgroundImage}
                         content={mastheadContent}
+						marginBottom={pageData?.masthead_margin_bottom}
                         overline={mastheadOverline}
                         title={mastheadTitle}
                     />
@@ -94,6 +95,7 @@ export const query = graphql`
                 masthead_overline {
                     text
                 }
+				masthead_margin_bottom
                 page_dark_mode
                 page_meta_description {
                     text
@@ -150,6 +152,14 @@ export const query = graphql`
 						items {
 							client_list_content {
 								raw
+							}
+							client_list_image {
+								alt
+								dimensions {
+									height
+									width
+								}
+								url
 							}
 							client_list_logo {
 								document {

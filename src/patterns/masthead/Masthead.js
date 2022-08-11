@@ -10,6 +10,7 @@ import Image from 'components/image/Image';
 const defaultProps = {
     backgroundImage: {},
     content: [],
+    marginBottom: false,
     overline: '',
     title: [],
 };
@@ -17,6 +18,7 @@ const defaultProps = {
 const propTypes = {
     backgroundImage: PropTypes.object,
     content: PropTypes.array,
+    marginBottom: PropTypes.bool,
     overline: PropTypes.string,
     title: PropTypes.array,
 };
@@ -24,6 +26,7 @@ const propTypes = {
 function Masthead({
     backgroundImage,
     content,
+    marginBottom,
     overline,
     title,
 }) {
@@ -34,7 +37,7 @@ function Masthead({
 
     return (
         <>
-            <div className="masthead">
+            <div className={`masthead ${marginBottom && 'masthead--margin-bottom'}`}>
                 {overline && (
                     <h1>{overline}</h1>
                 )}

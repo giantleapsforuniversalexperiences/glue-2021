@@ -84,6 +84,21 @@
     }
 }
 
+.dark {
+    .cta {
+        background-color: #434C58;
+
+        .link {
+            background-image: linear-gradient(#697D9A, #697D9A), linear-gradient(#fff, #fff);
+            color: #fff;
+
+            &::before {
+                background-image: url(/images/glue_link_light.svg);
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 920px) {
     .cta {
         padding: 3em 4.5em;

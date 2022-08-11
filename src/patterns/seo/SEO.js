@@ -110,10 +110,40 @@ function SEO({
     return (
         <Helmet
             htmlAttributes={{ lang }}
-            bodyAttributes={{ class: bodyClassName }}
+            bodyAttributes={{ class: `${bodyClassName}` }}
             title={pageTitle}
             defaultTitle={siteTitle}
             titleTemplate={`%s | ${siteTitle}`}
+            style={[{
+                "cssText": `
+                    @font-face {
+                        font-family: 'Karmilla';
+                        src: url('/fonts/Karmilla-Bold.woff2') format('woff2'),
+                            url('/fonts/Karmilla-Bold.woff') format('woff');
+                        font-weight: bold;
+                        font-style: normal;
+                        font-display: fallback;
+                    }
+                    
+                    @font-face {
+                        font-family: 'Karmilla';
+                        src: url('/fonts/Karmilla-Regular.woff2') format('woff2'),
+                            url('/fonts/Karmilla-Regular.woff') format('woff');
+                        font-weight: normal;
+                        font-style: normal;
+                        font-display: fallback;
+                    }
+                    
+                    @font-face {
+                        font-family: 'GT Super Display Super';
+                        src: url('/fonts/GT-Super-Display-Super.woff2') format('woff2'),
+                            url('/fonts/GT-Super-Display-Super.woff') format('woff');
+                        font-weight: 900;
+                        font-style: normal;
+                        font-display: fallback;
+                    }
+                `
+            }]}
             link={links}
             meta={[
                 {
