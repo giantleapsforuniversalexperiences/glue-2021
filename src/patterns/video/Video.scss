@@ -101,6 +101,17 @@
     }
 }
 
+.video__full-play-button {
+    background-color: transparent;
+    border: none;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
 .dark {
     .video {
         figcaption a {

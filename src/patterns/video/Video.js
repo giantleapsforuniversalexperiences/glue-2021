@@ -32,9 +32,11 @@ function Video({
 }) {
     const videoUrl = video?.split('src=')[1].split(/[ >]/)[0].slice(1,-1);
     const [isPlayingEmbed, setIsPlayingEmbed] = useState(false);
+    const [embedTouched, setEmbedTouched] = useState(false);
 
     function playEmbed() {
         setIsPlayingEmbed(!isPlayingEmbed);
+        setEmbedTouched(true);
 	}
 
     return (
@@ -59,19 +61,22 @@ function Video({
                         )}
                         {(videoUrl && coverVideo) && (
                             <>
-                                {!isPlayingEmbed && (
+                                {!embedTouched && (
                                     <>
                                         <button aria-label="Play full video" className="video__play-button" onClick={playEmbed} type="button">Play</button>
                                         <video autoPlay loop muted playsInline loading="lazy" src={coverVideo}></video>
                                     </>
                                 )}
-                                {isPlayingEmbed && (
-                                    <ReactPlayer
-                                        controls={false}
-                                        playing={isPlayingEmbed}
-                                        url={videoUrl}
-                                        loop={true}
-                                    />
+                                {embedTouched && (
+                                    <>
+                                        <button aria-label={`${isPlayingEmbed} ? 'Play video' : 'Pause video'`} className="video__full-play-button" onClick={() => setIsPlayingEmbed(!isPlayingEmbed)} type="button" />
+                                        <ReactPlayer
+                                            controls={false}
+                                            playing={isPlayingEmbed}
+                                            url={videoUrl}
+                                            loop={true}
+                                        />
+                                    </>
                                 )}
                             </>
                         )}
