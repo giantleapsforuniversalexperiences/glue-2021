@@ -7,6 +7,7 @@ import BlogIndividualPage from 'templates/blog-individual';
 import ContactPage from 'templates/contact';
 import ContentPage from 'templates/content';
 import HomePage from 'templates/home';
+import PlainContentPage from 'templates/plain-content';
 import WorkIndexPage from 'templates/work-index';
 import WordIndividualPage from 'templates/work-individual';
 import Shell from 'patterns/shell/Shell';
@@ -64,6 +65,7 @@ export default withUnpublishedPreview(NotFoundPage, {
         blog_individual_page: BlogIndividualPage,
         content_page: ContentPage,
         home_page: HomePage,
+        plain_content_page: PlainContentPage,
         work_index_page: WorkIndexPage,
         work_individual_page: WordIndividualPage,
     },

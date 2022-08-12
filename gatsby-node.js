@@ -56,6 +56,27 @@ exports.createPages = async ({ graphql, actions }) => {
 		context: { id: page.id },
 	}));
 
+	// Plain Content - create all plain content pages
+	const plainContentPages = await graphql(`{
+		allPrismicPlainContentPage {
+			nodes {
+				id
+				uid
+				data {
+					page_parent {
+						uid
+				  	}
+				}
+			}
+		}
+	}`);
+
+	plainContentPages.data.allPrismicPlainContentPage.nodes.forEach((page) => createPage({
+		path: (page.data.page_parent.uid) ? `/${page.data.page_parent.uid}/${page.uid}` : `/${page.uid}`,
+		component: path.resolve(__dirname, 'src/templates/plain-content.js'),
+		context: { id: page.id },
+	}));
+
 
 	// Work Index - create the work index page
 	const workIndexPage = await graphql(`{

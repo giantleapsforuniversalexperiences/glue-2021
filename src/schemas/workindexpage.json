@@ -72,6 +72,18 @@
               "customtypes" : [ "work_individual_page" ],
               "label" : "Work Article"
             }
+          },
+          "work_card_size": {
+            "type": "Select",
+            "config": {
+              "options": [
+                "33%",
+                "50%",
+                "100%"
+              ],
+              "default_value": "33%",
+              "label": "Card Size"
+            }
           }
         },
         "label" : "Work List"

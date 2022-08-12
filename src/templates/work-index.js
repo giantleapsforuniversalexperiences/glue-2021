@@ -125,6 +125,7 @@ function WorkIndexPage({
                 {loadedArticles && (
                     <>
                         <WorkList
+							className={activeFilters.length > 0 ? 'has-filters' : ''}
                             items={loadedArticles}
                         />
                         {hasMore && (
@@ -248,6 +249,7 @@ export const query = graphql`
                             }
                         }
                     }
+					work_card_size
                 }
                 body {
 					... on PrismicWorkIndexPageBodyBlogListFeatured {

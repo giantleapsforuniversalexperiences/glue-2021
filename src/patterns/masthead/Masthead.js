@@ -6,8 +6,10 @@ import './Masthead.scss';
 
 import Content from 'components/content/Content';
 import Image from 'components/image/Image';
+import Link from 'components/link/Link';
 
 const defaultProps = {
+    backUrl: {},
     backgroundImage: {},
     content: [],
     marginBottom: false,
@@ -16,6 +18,7 @@ const defaultProps = {
 };
 
 const propTypes = {
+    backUrl: PropTypes.object,
     backgroundImage: PropTypes.object,
     content: PropTypes.array,
     marginBottom: PropTypes.bool,
@@ -24,6 +27,7 @@ const propTypes = {
 };
 
 function Masthead({
+    backUrl,
     backgroundImage,
     content,
     marginBottom,
@@ -38,6 +42,11 @@ function Masthead({
     return (
         <>
             <div className={`masthead ${marginBottom && 'masthead--margin-bottom'}`}>
+                {backUrl?.uid && (
+                    <div className="link-wrapper">
+                        <Link className="link back-link" to={backUrl}>Back</Link>
+                    </div>
+                )}
                 {overline && (
                     <h1>{overline}</h1>
                 )}

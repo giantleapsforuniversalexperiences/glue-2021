@@ -25,8 +25,8 @@ function WorkList({
 
     return (
         <>
-            <div className={`tiles ${className}`}>
-                {items.map(({ work_article }) => {
+            <div className={`tiles work-list ${className}`}>
+                {items.map(({ work_article, work_card_size }) => {
                     index++;
                     const clientLogo = work_article?.document?.data?.masthead_client_logo?.document?.data?.client_logo;
                     const clientLogoAlt = (clientLogo?.alt) ? clientLogo?.alt : '';
@@ -45,9 +45,16 @@ function WorkList({
                         uid: work_article?.document?.uid,
                     };
                     const title = work_article?.document?.data?.masthead_heading?.text;
+                    let cardSizeClassName = 'third'
+
+                    if (work_card_size === '100%') {
+                        cardSizeClassName = 'full'
+                    } else if (work_card_size === '50%') {
+                        cardSizeClassName = 'half'
+                    }
 
                     return (
-                        <div className="tile" key={`${title}${index}`}>
+                        <div className={`tile ${cardSizeClassName}`} key={`${title}${index}`}>
                             <Link to={linkUrl}>
                                 {imageUrl && (
                                     <div className="hero-wrapper">

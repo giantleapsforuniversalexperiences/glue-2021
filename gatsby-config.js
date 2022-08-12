@@ -100,6 +100,7 @@ module.exports = {
                     content_page: require('./src/schemas/contentpage.json'),
                     home_page: require('./src/schemas/homepage.json'),
                     industries_data: require('./src/schemas/industriesdata.json'),
+                    plain_content_page: require('./src/schemas/plaincontentpage.json'),
                     services_data: require('./src/schemas/servicesdata.json'),
                     site_data: require('./src/schemas/sitedata.json'),
                     tags_data: require('./src/schemas/tagsdata.json'),

@@ -41,6 +41,7 @@ const Link = forwardRef(({
                 ref={ref}
                 rel="noopener noreferrer"
                 target="_blank"
+                id={`${to?.link_type?.toLowerCase()}-${to?.url?.replace(/[^A-Za-z0-9]/g, '-')}`}
                 {...rest}
             >
                 {children}
@@ -63,6 +64,7 @@ const Link = forwardRef(({
                 delay: 0.3,
                 length: 0.6,
             }}
+            id={`${to?.link_type?.toLowerCase()}-${to?.uid}`}
         >
             {children}
         </TransitionLink>

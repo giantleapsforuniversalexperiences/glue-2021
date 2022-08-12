@@ -30,14 +30,71 @@
             }
         }
     }
+
+    .link-wrapper {
+        display: block;
+        margin-bottom: 1em;
+        position: relative;
+        padding-left: 1.6em;
+
+        &:last-of-type {
+            margin-bottom: -0.25em;
+        }
+    }
+
+    .back-link {
+        &::before {
+            content: '';
+            background: transparent url(/images/glue_link.svg) no-repeat center;
+            background-size: contain;
+            width: 1.0657142857em;
+            height: 0.4047619048em;
+            display: inline-block;
+            position: absolute;
+            top: 0.5em;
+            left: 0.1em;
+            transform: rotate(-180deg);
+        }
+    }
 }
 
 .masthead--margin-bottom {
     margin-bottom: 1em;
 }
 
+.dark {
+    .masthead {
+        .link {
+            background-image: linear-gradient(#697D9A, #697D9A), linear-gradient(#fff, #fff);
+            color: #fff;
+
+            &::before {
+                background-image: url(/images/glue_link_light.svg);
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 920px) {
     .masthead {
+        .link-wrapper {
+            margin-bottom: 2.4em;
+            margin-top: 2.5em;
+
+            & + h1 {
+                padding-top: 1em;
+            }
+        }
+
+        h2 {
+            margin-top: .75em;
+        }
+
+        .link-wrapper + div h2,
+        h1 + div h2 {
+            margin-top: 0;
+        }
+        
         .page-intro {
             font-size: 1.2em;
             line-height: 1.4285714286em;

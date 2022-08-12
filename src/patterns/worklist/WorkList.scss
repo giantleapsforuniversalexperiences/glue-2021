@@ -1,0 +1,30 @@
+@media only screen and (min-width: 920px) {
+    .work-list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0;
+        margin-left: -2em;
+
+        .tile {
+            padding-left: 2em;
+        }
+
+        .tile.third {
+            width: 33.3333333%;
+        }
+        
+        .tile.half {
+            width: 50%;
+        }
+        
+        .tile.full {
+            width: 100%;
+        }
+
+        &.has-filters {
+            .tile {
+                width: 33.3333333%;
+            }
+        }
+    }
+}

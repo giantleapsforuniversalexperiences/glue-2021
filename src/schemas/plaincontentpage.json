@@ -1,0 +1,175 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Slug"
+      }
+    },
+    "page_parent" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "customtypes" : [ "content_page" ],
+        "label" : "Parent Page"
+      }
+    },
+    "page_dark_mode" : {
+      "type" : "Boolean",
+      "config" : {
+        "default_value" : false,
+        "label" : "Dark Mode"
+      }
+    },
+    "page_meta_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Page Meta Title"
+      }
+    },
+    "page_meta_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Page Meta Description"
+      }
+    },
+    "page_social_share_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Page Social Share Image"
+      }
+    }
+  },
+  "Masthead" : {
+    "masthead_overline" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Overline (h1)"
+      }
+    },
+    "masthead_heading" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading2",
+        "labels" : [ "br" ],
+        "label" : "Heading"
+      }
+    },
+    "masthead_content" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,strong,em,hyperlink,list-item,o-list-item",
+        "label" : "Content"
+      }
+    },
+    "masthead_margin_bottom" : {
+      "type" : "Boolean",
+      "config" : {
+        "default_value" : false,
+        "label" : "Add margin bottom"
+      }
+    },
+    "masthead_background_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Background Image"
+      }
+    }
+  },
+  "Components" : {
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "content" : [ ],
+          "image" : [ ],
+          "video" : [ ]
+        },
+        "choices" : {
+          "content" : {
+            "type" : "Slice",
+            "fieldset" : "Content",
+            "description" : "Free content block",
+            "icon" : "text_fields",
+            "display" : "list",
+            "non-repeat" : {
+              "content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item",
+                  "labels" : [ "blockquote", "small", "mark", "br" ],
+                  "label" : "Content"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "image" : {
+            "type" : "Slice",
+            "fieldset" : "Image",
+            "description" : "Image with caption",
+            "icon" : "image",
+            "display" : "list",
+            "non-repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              },
+              "image_caption" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph,strong,em,hyperlink",
+                  "label" : "Caption"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "video" : {
+            "type" : "Slice",
+            "fieldset" : "Video",
+            "description" : "YouTube or Vimeo embed with caption",
+            "icon" : "play_circle_filled",
+            "display" : "list",
+            "non-repeat" : {
+              "video_youtube_or_vimeo_video" : {
+                "type" : "Embed",
+                "config" : {
+                  "label" : "YouTube or Vimeo Video"
+                }
+              },
+              "video_cover_video" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "media",
+                  "label" : "Cover Video",
+                  "placeholder" : "This is a short autoplaying MP4 video that will be shown by default, clicking the play button will load the YT/Vimeo video"
+                }
+              },
+              "video_caption" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph,strong,em,hyperlink",
+                  "label" : "Caption"
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  }
+}
