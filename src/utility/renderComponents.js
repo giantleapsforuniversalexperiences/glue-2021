@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Accordion from 'patterns/accordion/Accordion';
 import BlogListFeatured from 'patterns/bloglistfeatured/BlogListFeatured';
 import Button from 'patterns/button/Button';
 import ClientList from 'patterns/clientlist/ClientList';
@@ -22,6 +23,16 @@ let index = 0;
 
 function renderComponents(component, type, siteData) {
     switch (type) {
+    case 'accordion':
+        index++;
+        console.log(component)
+        return (
+            <Accordion
+                key={`${type}-${index}`}
+                title={component?.primary?.accordion_header_title?.text}
+                items={component?.items}
+            />
+        );
     case 'blog_list_featured':
         index++;
         return (

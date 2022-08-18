@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "@loadable/component": "^5.14.1",
+    "@radix-ui/react-accordion": "^1.0.0",
     "clsx": "^1.1.1",
     "dotenv": "^8.2.0",
     "gatsby": "^2.32.3",

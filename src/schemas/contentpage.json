@@ -636,6 +636,38 @@
               }
             },
             "repeat" : { }
+          },
+          "accordion": {
+            "type": "Slice",
+            "fieldset": "Accordion",
+            "description": "List of collapsible content",
+            "icon": "format_align_justify",
+            "display": "list",
+            "non-repeat": {
+              "accordion_header_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Title"
+                }
+              }
+            },
+            "repeat": {
+              "accordion_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading3",
+                  "label": "Title"
+                }
+              },
+              "accordion_content": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, heading4, heading5, heading6, strong, em, hyperlink, list-item",
+                  "label": "Content"
+                }
+              }
+            }
           }
         }
       }

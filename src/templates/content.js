@@ -514,6 +514,22 @@ export const query = graphql`
 						}
 						slice_type
 					}
+					... on PrismicContentPageBodyAccordion {
+                        items {
+                            accordion_content {
+                                raw
+                            }
+                            accordion_title {
+                                text
+                            }
+                        }
+                        primary {
+                            accordion_header_title {
+                                text
+                            }
+                        }
+                        slice_type
+                    }
                 }
             }
         }

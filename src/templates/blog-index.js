@@ -569,6 +569,22 @@ export const query = graphql`
 						}
 						slice_type
 					}
+					... on PrismicBlogIndexPageBodyAccordion {
+                        items {
+                            accordion_content {
+                                raw
+                            }
+                            accordion_title {
+                                text
+                            }
+                        }
+                        primary {
+                            accordion_header_title {
+                                text
+                            }
+                        }
+                        slice_type
+                    }
                 }  
             }
         }
