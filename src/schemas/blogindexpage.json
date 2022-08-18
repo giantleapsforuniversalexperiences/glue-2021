@@ -518,6 +518,31 @@
             },
             "repeat" : { }
           },
+          "autoplay_video" : {
+            "type" : "Slice",
+            "fieldset" : "Autoplay Video",
+            "description" : "Autoplaying MP4 video with caption",
+            "icon" : "play_circle_filled",
+            "display" : "list",
+            "non-repeat" : {
+              "autoplay_video" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "media",
+                  "label" : "Video",
+                  "placeholder" : "Make sure to optimise your video – www.veed.io/video-compressor"
+                }
+              },
+              "autoplay_video_caption" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph,strong,em,hyperlink",
+                  "label" : "Caption"
+                }
+              }
+            },
+            "repeat" : { }
+          },
           "work_list_featured" : {
             "type" : "Slice",
             "fieldset" : "Work List Featured",

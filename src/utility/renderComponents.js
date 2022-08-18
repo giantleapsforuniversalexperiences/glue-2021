@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Accordion from 'patterns/accordion/Accordion';
+import AutoplayVideo from 'patterns/autoplayvideo/AutoplayVideo';
 import BlogListFeatured from 'patterns/bloglistfeatured/BlogListFeatured';
 import Button from 'patterns/button/Button';
 import ClientList from 'patterns/clientlist/ClientList';
@@ -25,12 +26,20 @@ function renderComponents(component, type, siteData) {
     switch (type) {
     case 'accordion':
         index++;
-        console.log(component)
         return (
             <Accordion
                 key={`${type}-${index}`}
                 title={component?.primary?.accordion_header_title?.text}
                 items={component?.items}
+            />
+        );
+    case 'autoplay_video':
+        index++;
+        return (
+            <AutoplayVideo
+                key={`${type}-${index}`}
+                caption={component?.primary?.autoplay_video_caption?.raw}
+                videoUrl={component?.primary?.autoplay_video?.url}
             />
         );
     case 'blog_list_featured':

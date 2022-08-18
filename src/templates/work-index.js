@@ -675,6 +675,17 @@ export const query = graphql`
                         }
                         slice_type
                     }
+					... on PrismicWorkIndexPageBodyAutoplayVideo {
+						primary {
+							autoplay_video {
+								url
+							}
+							autoplay_video_caption {
+								raw
+							}
+						}
+						slice_type
+					}
                 }
             }
         }

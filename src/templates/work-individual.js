@@ -556,6 +556,17 @@ export const query = graphql`
                         }
                         slice_type
                     }
+					... on PrismicWorkIndividualPageBodyAutoplayVideo {
+						primary {
+							autoplay_video {
+								url
+							}
+							autoplay_video_caption {
+								raw
+							}
+						}
+						slice_type
+					}
 				}
 				related_posts {
                     related_posts_article {
