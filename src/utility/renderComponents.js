@@ -13,6 +13,7 @@ import Hr from 'patterns/hr/Hr';
 import Image from 'patterns/image/Image';
 import IndustryList from 'patterns/industrylist/IndustryList';
 import LinkList from 'patterns/linklist/LinkList';
+import LottieAnimation from 'patterns/lottieanimation/LottieAnimation';
 import SectionTitle from 'patterns/sectiontitle/SectionTitle';
 import StatList from 'patterns/statlist/StatList';
 import TeamList from 'patterns/teamlist/TeamList';
@@ -148,6 +149,14 @@ function renderComponents(component, type, siteData) {
             <LinkList
                 key={`${type}-${index}`}
                 items={component?.items}
+            />
+        );
+    case 'lottie_animation':
+        index++;
+        return (
+            <LottieAnimation
+                key={`${type}-${index}`}
+                animationData={component?.primary?.lottie_animation_code?.text}
             />
         );
     case 'section_title':

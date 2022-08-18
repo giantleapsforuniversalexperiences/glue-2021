@@ -686,6 +686,14 @@ export const query = graphql`
 						}
 						slice_type
 					}
+					... on PrismicWorkIndexPageBodyLottieAnimation {
+						primary {
+							lottie_animation_code {
+								text
+							}
+						}
+						slice_type
+					}
                 }
             }
         }

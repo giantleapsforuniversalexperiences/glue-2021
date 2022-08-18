@@ -693,6 +693,23 @@
                 }
               }
             }
+          },
+          "lottie_animation": {
+            "type": "Slice",
+            "fieldset": "Lottie Animation",
+            "description": "Autoplaying lottie animation",
+            "icon": "gesture",
+            "display": "list",
+            "non-repeat": {
+              "lottie_animation_code": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "preformatted",
+                  "label": "Lottie Animation Code (JSON)"
+                }
+              }
+            },
+            "repeat": {}
           }
         }
       }
