@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { withPreview } from 'gatsby-source-prismic';
+import HubspotForm from 'react-hubspot-form';
 import PropTypes from 'prop-types';
 import Shell from 'patterns/shell/Shell';
 import loadable from '@loadable/component';
@@ -61,12 +62,17 @@ function ContactPage({
                         {formTitle && (
                             <h3 className="section-title">{formTitle}</h3>
                         )}
-                        <ContactForm
+                        <HubspotForm
+                            portalId='4434972'
+                            formId='351b02b3-2d8d-4d7c-95dd-0c44a3b620d3'
+                            loading={<div>Loading...</div>}
+                        />
+                        {/* <ContactForm
                             formSubtitle1={formSubtitle1}
                             formSubtitle2={formSubtitle2}
                             formInquiryOptions={formInquiryOptions}
                             formConfirmationOptions={formConfirmationOptions}
-                        />
+                        /> */}
                     </div>
                     <div className="content-block contact-block">
                         {contactLinks.map(({ items, primary }) => {
