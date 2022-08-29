@@ -3,7 +3,8 @@
     position: relative;
     width: 100%;
 
-    h2 {
+    h2,
+    .masthead-title {
         margin-bottom: 0;
     }
 
@@ -84,6 +85,10 @@
             & + h1 {
                 padding-top: 1em;
             }
+        }
+
+        .masthead__title {
+            padding: 0 !important;
         }
 
         h2 {

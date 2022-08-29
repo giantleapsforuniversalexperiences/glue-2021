@@ -23,10 +23,12 @@
   "dependencies": {
     "@loadable/component": "^5.14.1",
     "@radix-ui/react-accordion": "^1.0.0",
+    "@u-wave/react-vimeo": "^0.9.8",
     "clsx": "^1.1.1",
     "dotenv": "^8.2.0",
     "gatsby": "^2.32.3",
     "gatsby-plugin-canonical-urls": "^2.3.10",
+    "gatsby-plugin-google-tagmanager": "^4.21.0",
     "gatsby-plugin-image": "^0.7.1",
     "gatsby-plugin-loadable-components-ssr": "^2.1.0",
     "gatsby-plugin-manifest": "^2.4.28",

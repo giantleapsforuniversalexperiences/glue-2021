@@ -25,7 +25,7 @@ function BlogList({
 
     return (
         <>
-            <div className={`tiles ${className}`}>
+            <div className={`blog-list tiles ${className}`}>
                 {items.map(({ data, type, uid }) => {
                     index++;
                     const date = data?.page_date;

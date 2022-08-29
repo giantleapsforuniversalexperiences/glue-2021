@@ -1,3 +1,9 @@
+.work-list {
+    .tile h3 {
+        font-size: 1.2em;
+    }
+}
+
 @media only screen and (min-width: 920px) {
     .work-list {
         display: flex;
@@ -7,6 +13,10 @@
 
         .tile {
             padding-left: 2em;
+
+            h3 {
+                font-size: 1.4761904762em;
+            }
         }
 
         .tile.third {

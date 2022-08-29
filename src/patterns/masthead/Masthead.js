@@ -39,6 +39,8 @@ function Masthead({
     const imageUrl = backgroundImage?.url;
     const imageWidth = backgroundImage?.dimensions?.width;
 
+    console.log(title)
+
     return (
         <>
             <div className={`masthead ${marginBottom && 'masthead--margin-bottom'}`}>
@@ -51,9 +53,16 @@ function Masthead({
                     <h1>{overline}</h1>
                 )}
                 {title?.[0]?.text && (
-                    <Content
-                        content={title}
-                    />
+                    <>
+                        {!overline && (
+                            <h1 className="masthead__title">{title?.[0]?.text}</h1>
+                        )}
+                        {overline && (
+                            <Content
+                                content={title}
+                            />
+                        )}
+                    </>
                 )}
                 {content?.[0]?.text && (
                     <Content
