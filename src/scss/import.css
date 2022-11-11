@@ -53,7 +53,7 @@
      
     @media only screen and (min-width: 920px) {
     .hero-wrapper { margin-bottom: 0.5em; }
-    figure { background: #03070D; width: -webkit-calc(100% + 9em); width: -moz-calc(100% + 9em); width: -ms-calc(100% + 9em); width: -o-calc(100% + 9em); width: calc(100% + 9em); left: -4.5em; }
+    figure { background: #ffffff; width: -webkit-calc(100% + 9em); width: -moz-calc(100% + 9em); width: -ms-calc(100% + 9em); width: -o-calc(100% + 9em); width: calc(100% + 9em); left: -4.5em; }
     figure { margin-bottom: 0; padding-bottom: 0; display: block; }
     figure ~ figure { margin-bottom: 0; padding-bottom: 0; }
     figure ~ figure img { margin-bottom: 0; display: block; }
