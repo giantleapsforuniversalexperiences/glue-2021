@@ -21,6 +21,14 @@ module.exports = {
         title: 'Glue',
     },
     plugins: [
+        // {
+        //     resolve: 'gatsby-plugin-google-tagmanager',
+        //     options: {
+        //       id: 'YOUR_GOOGLE_TAGMANAGER_ID',
+        //       includeInDevelopment: false,
+        //       defaultDataLayer: { platform: 'gatsby' },
+        //     },
+        // },
         'gatsby-plugin-transition-link',
         'gatsby-plugin-image',
         {
@@ -52,7 +60,7 @@ module.exports = {
                         policy: [{ userAgent: '*', disallow: ['/'] }],
                     },
                     production: {
-                        policy: [{ userAgent: '*', disallow: ['/'] }],
+                        policy: [{ userAgent: '*' }],
                     },
                 },
             },
